@@ -1,0 +1,333 @@
+﻿.middle-centered {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.body-align {
+    max-width: 1920px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+.bg-body {
+    background-image: url(/images/home/home-bg.png);
+    background-size: 500px 500px;
+    padding-bottom: 60px;
+    background-repeat: repeat;
+    background-color: whitesmoke;
+}
+
+.tour-detail__body-container {
+    padding-top: 30px !important;
+    padding-bottom: 40px !important;
+}
+
+.icon-container {
+    color: var(--main-text-dark);
+}
+
+    .icon-container:hover {
+        color: aqua;
+    }
+
+.icon--size {
+    width: 20px !important;
+    aspect-ratio: 1;
+}
+
+@media(max-width: 768px) {
+    .tour-detail__body-container {
+        padding: 30px 0 40px 0;
+    }
+}
+
+/* Banner */
+
+/* Intro */
+.price-tag {
+    font-family: var(--font-kalam);
+    color: var(--main-text-dark);
+    font-size: 80px;
+}
+
+.head__text--size {
+    font-size: clamp(24px, 1vw, 36px);
+}
+
+booked__text--size {
+    font-size: clamp(14px, 1vw, 20px);
+}
+
+/* Overview */
+
+/* Itinerary */
+.itinerary {
+    position: relative;
+}
+
+.itinerary-container {
+    border: none;
+    /*border-left: 2px solid #14B0B1;*/
+    /*padding: 0 10px 0 10px;*/
+    position: relative;
+}
+
+
+
+.itinerary__content:after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 20px;
+    background-color: #14B0B1;
+}
+.itinerary__content:last-child::after {
+    content:none
+}
+
+.itinerary__content {
+    position: relative;
+    padding-left: 50px;
+    /* Add padding to the left to make space for the number */
+}
+
+.itinerary-number {
+    z-index:1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    aspect-ratio: 1;
+    background-color: #6CE7F4;
+    border-radius: 50%;
+    color: black;
+    font-size: 1rem;
+    position: absolute;
+    /*left: -30px;*/
+    left: 0px;
+    top: 0;
+}
+
+.itinerary-number-final {
+    /*  top: unset;
+    bottom: 0;*/
+}
+
+.custom-collapse-trigger {
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    width: 100%;
+    color: #0E91AC;
+    transition: background-color 0.5s ease;
+}
+
+    .custom-collapse-trigger.collapsed {
+        color: black;
+        transition: background-color 0.5s ease;
+    }
+
+.collapse-sub-heading {
+    color: rgb(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.itinerary-content__text {
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.itinerary-content__title, .itinerary-content__duration {
+    color: rgb(14, 145, 172, 0.8);
+}
+
+.itinerary-content__title {
+    font-size: 1.1rem;
+    font-weight: 450;
+}
+
+.carousel-inner {
+    display: flex;
+    height: fit-content;
+}
+
+.carousel-image-wrapper {
+    flex: 0 0 33.333%;
+    padding: 0 5px;
+}
+
+    .carousel-image-wrapper img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+@media (max-width: 768px) {
+    .carousel-image-wrapper {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-image-wrapper {
+        flex: 0 0 100%;
+    }
+}
+
+.carousel-control-prev {
+    left: -7% !important;
+}
+
+.carousel-control-next {
+    right: -7% !important;
+}
+
+.carousel-control-prev-icon.custom-prev-icon {
+    background-image: url(/images/icon/left-slide-arrow.png) !important;
+}
+
+.carousel-control-next-icon.custom-next-icon {
+    background-image: url(/images/icon/right-slide-arrow.png) !important;
+}
+/* All you need to know */
+.information {
+}
+
+    .information li {
+        margin-left: 40px;
+    }
+
+    .information .inclusion {
+        background-image: url(/images/rooms/blue-smear-bg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .information .exclusion {
+        background-image: url(/images/rooms/yellow-smear-bg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+/* Gallery */
+.gallery-container {
+    position: relative;
+}
+
+.gallery__header {
+    font-size: 80px;
+}
+
+.gallery img {
+    border-radius: 10px;
+    height: 100%;
+}
+
+.gallery__grid--1 {
+    grid-area: item-1;
+}
+
+.gallery__grid--2 {
+    grid-area: item-2;
+}
+
+.gallery__grid--3 {
+    grid-area: item-3;
+}
+
+.gallery__grid--4 {
+    grid-area: item-4;
+}
+
+.gallery__grid--5 {
+    grid-area: item-5;
+}
+
+.gallery-grid-container {
+    display: grid;
+    grid-template-areas:
+        'item-1 item-1 item-1 item-2 item-2'
+        'item-1 item-1 item-1 item-2 item-2'
+        'item-3 item-3 item-3 item-2 item-2'
+        'item-3 item-3 item-3 item-4 item-4'
+        'item-5 item-5 item-5 item-5 item-5';
+    gap: 15px;
+}
+
+/* Review */
+.review__header--size {
+    font-size: 26px;
+}
+
+.rating__text--size {
+    font-size: 30px;
+}
+
+.review {
+    position: relative;
+}
+
+.review__header {
+    text-align: center;
+}
+
+.review__body {
+    padding: 20px 0;
+}
+
+.review-modified-card {
+    max-width: 25rem;
+    width: 100%;
+    padding: 15px;
+}
+
+.card-custom {
+    background-color: #EDFDFE;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 550px;
+    -webkit-box-shadow: 1px 0px 6.5px 0px rgba(25, 117, 137, 0.49);
+    -moz-box-shadow: 1px 0px 6.5px 0px rgba(25, 117, 137, 0.49);
+    box-shadow: 1px 0px 6.5px 0px rgba(25, 117, 137, 0.49);
+}
+
+.review__body .swiper-android .swiper-slide, .review__body .swiper-ios .swiper-slide, .review__body .swiper-wrapper {
+    padding: 6px;
+}
+
+.avatar-placeholder {
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle; /* Aligns the avatar vertically */
+}
+
+/* Decorations */
+.review-leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/images/home/home-leaves.png);
+    background-size: 100% 100%;
+    width: 80%;
+    transform: scaleX(-1);
+    aspect-ratio: 1101 / 549;
+}
+
+.golden-glasses {
+    position: absolute;
+    top: 90px;
+    right: -10px;
+    background-image: url(/images/rooms/golden-glasses.png);
+    background-size: 100% 100%;
+    width: 150px;
+    aspect-ratio: 203 / 131;
+    z-index: 5;
+}

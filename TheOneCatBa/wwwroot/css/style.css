@@ -1,0 +1,247 @@
+﻿:root {
+    --main-color: rgba(0, 46, 59, 1);
+    --second-color: #ff9900;
+    --text-color: rgba(0, 46, 59, 1);
+    --background-color: rgba(51, 190, 191, 0.10);
+    --dark-color: #194F60;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-signika: 'Signika', sans-serif;
+    --font-kaushan: "Kaushan Script", cursive;
+    --font-kalam: "Kalam", cursive;
+    --font-caveat: "Caveat", cursive;
+}
+
+
+body {
+    margin: 0;
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.prata-regular {
+    font-family: "Prata", serif !important;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif !important;
+}
+
+
+*, ul, h1, h2, h3, h4, h5, h6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+img, svg {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+button:focus {
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* Body styles
+-------------------------------------------------- */
+:root {
+    --main-text-dark: #12748C;
+    --main-text-darker: #10556E;
+    --font-size-36px: 36px;
+    --font-size-24px: 24px;
+    --font-size-16px: 16px;
+    --font-size-14px: 14px;
+}
+
+.font-36px {
+    font-size: var(--font-size-36px);
+}
+
+.font-24px {
+    font-size: var(--font-size-24px);
+}
+
+.font-16px {
+    font-size: var(--font-size-16px);
+}
+
+.font-14px {
+    font-size: var(--font-size-14px);
+}
+
+.font-24px {
+    font-size: var(--font-size-24px);
+}
+
+.aligner--left {
+    text-align: left !important;
+}
+
+.aligner--right {
+    text-align: right !important;
+}
+
+.padding-sides {
+    padding: 0 45px !important;
+}
+
+@media (max-width: 768px) {
+    .padding-sides {
+        padding: 0 !important;
+    }
+}
+
+.text-dark-green {
+    color: var(--main-text-dark);
+}
+
+.text-darker-green {
+    color: var(--main-text-darker);
+}
+
+.header--spacing {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.kalam--text {
+    font-family: var(--font-kalam);
+}
+
+.kaushan--text {
+    font-family: var(--font-kaushan);
+}
+
+.caveat--text {
+    font-family: var(--font-caveat);
+    color: #41afac;
+    font-weight: 700;
+    font-size: 3rem !important;
+}
+
+/* Stars rating */
+
+.star-rating {
+    font-size: 20px;
+    color: #FFD700;
+}
+
+    .star-rating .fa {
+        font-size: inherit;
+        position: relative;
+    }
+
+/* Full star icon */
+.fa-star:before {
+    content: '\f005'; /* Unicode for full star icon */
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Empty star icon */
+.fa-star-o:before {
+    position: relative;
+    display: inline-block;
+    color: gray !important;
+    overflow: hidden;
+}
+
+/* Half star icon */
+.fa-star-half-o:before {
+    content: '\f089'; /* Unicode for half-star icon */
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #FFD700;
+}
+
+/* Grey background for the half star */
+.fa-star-half-o::after {
+    content: '\f005'; /* Unicode for full star icon */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: gray;
+    transform: scaleX(-1);
+}
+
+/* Animations */
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0%;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.slideInBottom {
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: slideInBottom;
+}
+
+.fadeIn {
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: fadeIn;
+}
+
+/* Footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+}

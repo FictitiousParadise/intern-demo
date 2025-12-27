@@ -1,0 +1,421 @@
+﻿.middle-centered {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.heading-padding {
+    padding: 20px 0;
+}
+
+.body-align {
+    max-width: 1920px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-body {
+    background-image: url(/images/home/home-bg.png);
+    background-size: 500px 500px;
+    padding-bottom: 60px;
+    background-repeat: repeat;
+    background-color: whitesmoke;
+}
+
+/* BANNER */
+.banner-text {
+    position: absolute;
+    left: 25px;
+    top: 45%;
+    z-index: 3;
+    color: var(--main-text-dark);
+    width: 50%;
+    min-width: 430px;
+    text-align: left;
+}
+
+.banner-text__header {
+    font-size: 36px;
+    font-weight: 500;
+    width: 90%;
+}
+
+.banner-text__heading-sub {
+    font-size: 18px;
+    width: 50%;
+}
+
+.banner-content {
+    background-image: url(/images/home/wave-left.png);
+    top: 35px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: center;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 600px;
+    height: 100%;
+    z-index: 2;
+}
+
+@media(max-width: 992px) {
+    .banner-content {
+        background-image: url(/images/home/home-wave-mobile.png);
+        top: unset;
+        left: unset;
+        bottom: -340px;
+        right: -190px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-position-y: center;
+        background-size: 100% 100%;
+        position: absolute;
+        min-width: 860px;
+        width: 160%;
+        aspect-ratio: 727 / 492;
+    }
+
+    .banner-text {
+        color: white;
+        top: 22%;
+    }
+}
+
+/* BOOK NOW FORM */
+.header__book-now-form {
+    top: -50px;
+    position: relative;
+    z-index: 5;
+    background-color: rgba(209, 250, 252, 0.5);
+    border-radius: 10px;
+    height: auto;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.right-separator {
+    border-right: 1px solid black;
+}
+
+.booking-form {
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+    .booking-form .form-group {
+        margin-bottom: 0;
+    }
+
+    .booking-form .form-btn-book-now {
+        background-color: #FF9900;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
+    .booking-form input, .booking-form select {
+        background-color: unset;
+        border: none;
+        font-size: 12px !important;
+    }
+
+    .booking-form select {
+        min-width: unset;
+    }
+
+    .booking-form col-6 {
+        text-align: left;
+    }
+
+    .booking-form .form-select {
+        padding: unset;
+    }
+
+.booking-form__label {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+}
+
+.custom-select {
+    appearance: menulist;
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 2rem 0.375rem 0.75rem;
+}
+
+.booking-form .mobile-only {
+    display: none;
+}
+
+/* Buttons */
+.book-now-button {
+    background-color: rgb(217,217,217,0.5);
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px;
+    font-size: 16px;
+    box-shadow: 1px 1px #544738;
+}
+
+@media(max-width: 768px) {
+    .header__book-now-form {
+        width: 75%;
+    }
+        .right-separator {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .booking-form .mobile-only {
+        display: flex;
+    }
+
+    .mobile-only img {
+        width: 20px;
+        aspect-ratio: 1;
+        margin-right: 5px;
+    }
+
+    .booking-form__label {
+        display: none;
+    }
+
+    .booking-form .form-btn-book-now {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+/* TOUR SLIDER */
+.tour {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.tour__body {
+    z-index: 3;
+}
+
+.card__image--size {
+    position: relative;
+    width: 700px !important;
+    aspect-ratio: 3 / 2;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-14px);
+    transition: -webkit-line-clamp 0.3s ease-in-out;
+}
+
+.card__price--blue {
+    color: #29D2E7;
+    font-size: 24px;
+}
+
+.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.43);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.tour-card-modifier {
+    width: 100%;
+    max-width: 23rem;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .tour-card-modifier:hover .card-img-overlay {
+        top: 30%;
+    }
+
+    .tour-card-modifier:hover .card-content {
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+    }
+
+.book-now-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 992px) {
+    .tour-card-modifier {
+        max-width: 19rem;
+    }
+}
+
+/* ALL TOUR */
+
+.all-tour-container {
+    position: relative;
+}
+
+.all-tour__body .nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+
+.all-tour__body .nav-item {
+    margin: 0;
+}
+
+.all-tour__body .nav-link {
+    position: relative;
+    background-color: #0E91AC;
+    width: 80%;
+    color: white;
+    border-radius: .25rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition: background-color .3s ease-in-out;
+    border: none;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.all-tour__body .nav .active {
+    background-color: #0DB5CD;
+}
+
+.tour-grid__container {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+}
+
+    .tour-grid__container::after {
+        content: "";
+        display: block;
+        grid-column: span 3;
+    }
+
+    .tour-grid__container .tour-card-modifier {
+        left: 50%;
+        transform: translate(-50%);
+        max-width: 500px;
+    }
+
+@media (max-width: 992px) {
+    .tour-grid__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tour-grid__container::after {
+        grid-column: span 2;
+    }
+}
+
+@media(max-width: 576px) {
+    .tour-grid__container {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-grid__container::after {
+        grid-column: span 1;
+    }
+}
+
+/* Custom CSS for the paginator */
+.pagination {
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    background-color: transparent;
+    border: 1px solid #29D2E7;
+    color: #29D2E7 !important;
+}
+
+.page-item .page-link {
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-dark) !important;
+}
+
+.page-item:hover .page-link {
+    color: #29D2E7;
+}
+
+.page-link {
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+/* DECORATIONS */
+.home-beach-items {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    background-image: url(/images/home/home-beach-item-1.png);
+    background-size: 100% 100%;
+    width: 30%;
+    aspect-ratio: 267 / 341;
+    max-width: 145px;
+    max-height: 185px;
+}
+
+.orange-splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/images/home/home-splash-1.png);
+    background-size: 100% 100%;
+    width: 70%;
+    aspect-ratio: 1087 / 368;
+}
+
+.beach-items {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    background-image: url(/images/home/home-beach-item-1.png);
+    background-size: 100% 100%;
+    width: 30%;
+    aspect-ratio: 267 / 341;
+    max-width: 145px;
+    max-height: 185px;
+}

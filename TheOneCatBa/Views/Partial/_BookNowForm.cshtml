@@ -1,0 +1,47 @@
+﻿<link href="~/css/partials/bookNowForm.css" rel="stylesheet" />
+
+<div class="header__book-now-form">
+    <div class="container">
+        <div class="booking-form">
+            <div class="row g-0">
+                <div class="col-md-5 p-2 right-separator">
+                    <div class="booking-form__label">Guest Number</div>
+                    <div class="form-group">
+                        <div class="row g-0">
+                            <div class="col-1 mobile-only">
+                                <img src="/images/icon/home-people-icon.png" />
+                            </div>
+                            <div class="col-11 col-md-12">
+                                <select class="form-select" id="exampleSelect1">
+                                    <option value="1">1 Guest</option>
+                                    <option selected value="2">2 Guest</option>
+                                    <option value="3">3 Guest</option>
+                                    <option value="4">4 Guest</option>
+                                    <option value="5">5 Guest</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 p-2">
+                    <div class="booking-form__label">Date</div>
+                    <div class="row g-0">
+                        <div class="col-1 mobile-only">
+                            <img src="/images/icon/home-callendar-icon.png" />
+                        </div>
+                        <div class="col-11 col-md-12 aligner--left">
+                            <input id="dateRange" name="dateBooking" placeholder="Start date - End date">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-2">
+                    <a type="button" class="btn form-btn-book-now middle-centered">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>

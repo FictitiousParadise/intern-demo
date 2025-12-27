@@ -1,0 +1,259 @@
+﻿@{
+    CloudbedsRoomType rooms = ViewData["rooms"] as CloudbedsRoomType;
+    Page page = ViewData["page"] as Page;
+}
+
+@functions {
+    public List<List<ImageApp>> BatchImages(List<ImageApp> images, int batchSize)
+    {
+        var batches = new List<List<ImageApp>>();
+        for (int i = 0; i < images.Count; i += batchSize)
+        {
+            batches.Add(images.GetRange(i, Math.Min(batchSize, images.Count - i)));
+        }
+        return batches;
+    }
+}
+
+<link href="~/css/rooms/roomsDetail.css" rel="stylesheet" />
+
+<div class="bg-body bg-room-detail body-align">
+
+    @* BANNER *@
+    <section class="section-banner">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    @* ROOM BODY *@
+    <div class="padding-sides room-detail__body-container">
+        <div class="row g-0">
+
+            @* ROOM DETAIL *@
+            <div class="col-lg-8 p-3">
+
+                @* INTRO *@
+                <section class="intro">
+                    <div class="row g-0">
+                        <div class="col aligner--left">
+                            <div class="head__text--size fw-bold">@rooms.roomTypeName</div>
+                        </div>
+                        <div class="col aligner--right">
+                            <div class="d-flex flex-row-reverse booked__text--size">
+                                <span class="text"> ? booked </span>
+                                <span class="star-rating">
+@*                               <span class="fa fa-star"></span>
+                                 <span class="fa fa-star-half-o"></span>
+                                 <span class="fa fa-star fa-star-o"></span>*@
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col aligner--left">
+                            <div class="price-tag">
+                                @{
+                                    @((rooms.price / 100).ToString("0.00"))
+                                }$
+                            </div>
+                        </div>
+                        <div class="col aligner--right">
+                            <a class="icon-container" href="#"><span><img src="/images/icon/upload.png" class="icon--size" alt="share icon" /> Share</span></a>
+                        </div>
+                    </div>
+                </section>
+
+                @* OVERVIEW *@
+@*                 <section class="overview">
+                    <div class="font-36px kalam--text text-dark-green aligner--left header--spacing">Overview</div>
+                    <div class="aligner--left">@room.Overview</div>
+                    <div class="row g-0 aligner--left mt-3">
+                        <div class="col"><span><img src="/images/icon/arrow-square.png" class="icon--size" alt="arrow square icon" />  @room.Destination</span></div>
+                        <div class="col"><span><img src="/images/icon/bus.png" class="icon--size" alt="arrow square icon" />  @room.Transport</span></div>
+                        <div class="w-100 d-block d-md-none"></div>
+                        <div class="col"><span><img src="/images/icon/alarm.png" class="icon--size" alt="arrow square icon" />  @room.Duration</span></div>
+                        <div class="col"><span><img src="/images/icon/person-wave.png" class="icon--size" alt="arrow square icon" />  @room.Departure</span></div>
+                    </div>
+                </section> *@
+
+                @* FACILITIES *@
+                <section class="facilities mt-3">
+                    <div class="font-36px kalam--text text-dark-green aligner--left header--spacing">Facilities</div>
+                    <div class="facility-grid__container">
+                        @if (rooms.roomTypePhotos.Count == 0)
+                        {
+                            <p>No images available</p>
+                        }else
+                        {
+                            @foreach (var img in rooms.roomTypePhotos.Take(6))
+                            {
+                                <img src="@(img)" alt="@(img.Split("/")[img.Split("/").Length-1])" />
+                            }
+                        }
+
+                    </div>
+                </section>
+
+                @* ALL YOU NEED TO KNOW *@
+                <section class="information aligner--left">
+                    <div class="font-36px kalam--text text-dark-green header--spacing">All You Need To Know</div>
+                    <div class="inclusion mt-2">
+                        <div class="font-24px">Inclusions</div>
+                        <ul>
+                            <li>Room services</li>
+                        </ul>
+                    </div>
+                    <div class="exclusion mt-2">
+                        <div class="font-24px">Exclusions</div>
+                        <ul>
+                            <li>Daycare</li>
+                        </ul>
+                    </div>
+                </section>
+
+                @* GALLERY *@
+                @* <section class="gallery">
+                    <div class="gallery-container aligner--left">
+                        <div class="golden-glasses"></div>
+                        <div class="kalam--text text-dark-green gallery__header header--spacing">Gallery</div>
+                        <div class="sun-glasses"></div>
+                        <div class="gallery-grid-container">
+                            @if (rooms.roomTypePhotos != null && rooms.roomTypePhotos.Any())
+                            {
+                                for (int i = 0; i < Math.Min(rooms.roomTypePhotos.Count, 5); i++)
+                                {
+                                    <img src="@(rooms.roomTypePhotos[i])" class="gallery__grid--@(i + 1)" alt="@rooms.roomTypePhotos[i]" />
+                                }
+                            }
+                            else
+                            {
+                                <p>No images available</p>
+                            }
+                        </div>
+                    </div>
+                </section> *@
+
+                @* REVIEW *@
+                <section class="review">
+                    <div class="review-leaves"></div>
+                    <div class="row g-0 header--spacing">
+                        <div class="col aligner--left">
+                            <div class="review__header--size fw-bold">Review</div>
+                        </div>
+                        <div class="col aligner--right">
+                            <div class="d-flex flex-row-reverse rating__text--size">
+                                <span class="mr-2">
+                                    <span class="star-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </span>
+                                </span>
+                                <span class="text">5 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col aligner--left">
+                            <div>Title abc abc abc abc abc abc abc</div>
+                        </div>
+                        <div class="col aligner--right">
+                            <div class="font-14px">469 reviews</div>
+                        </div>
+                    </div>
+                    <div class="room-review">
+                        <div class="review__body">
+                            <!-- Slider main container -->
+                            <div class="swiper room-detail-silde">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="card-custom">
+                                            <div class="media mb-3 d-flex flex-row">
+                                                <div class="review-avatar-container p-2">
+                                                    <div class="avatar-placeholder mr-3"></div>
+                                                </div>
+                                                <div class="media-body p-2">
+                                                    <h5 class="mt-0">Guest Name</h5>
+                                                    <div class="star-rating ml-2">
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star fa-star-o"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="font-14px aligner--left">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card-custom">
+                                            <div class="media mb-3 d-flex flex-row">
+                                                <div class="review-avatar-container p-2">
+                                                    <div class="avatar-placeholder mr-3"></div>
+                                                </div>
+                                                <div class="media-body p-2">
+                                                    <h5 class="mt-0">Guest Name</h5>
+                                                    <div class="star-rating ml-2">
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star fa-star-o"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="font-14px aligner--left">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card-custom">
+                                            <div class="media mb-3 d-flex flex-row">
+                                                <div class="review-avatar-container p-2">
+                                                    <div class="avatar-placeholder mr-3"></div>
+                                                </div>
+                                                <div class="media-body p-2">
+                                                    <h5 class="mt-0">Guest Name</h5>
+                                                    <div class="star-rating ml-2">
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star fa-star-o"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="font-14px aligner--left">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            @* ROOMS FORM BOOK NOW *@
+            <div class="col-lg-4 p-3">
+                @await Html.PartialAsync("~/Views/Partial/_BookNowSideForm.cshtml")
+            </div>
+        </div>
+        @* FAQ *@
+        <section class="faq">
+            @await Html.PartialAsync("~/Views/Partial/_Faq.cshtml")
+        </section>
+
+    </div>
+</div>

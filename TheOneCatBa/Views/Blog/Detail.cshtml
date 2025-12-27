@@ -1,0 +1,123 @@
+﻿@{
+    List<CloudbedsRoomType> rooms = ViewData["rooms"] as List<CloudbedsRoomType>;
+    Blog blog = ViewData["blog"] as Blog;
+    Page page = ViewData["page"] as Page;
+}
+
+<link href="~/css/blog/blogDetail.css" rel="stylesheet" />
+
+<div class="body-align">
+    <section class="section-banner section-bg">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    <div class="bg-blog-detail">
+        <section class="blog-detail__content">
+            <div class="star-fish"></div>
+            <div class="row g-0">
+                <div class="col-md-7 aligner--left">
+                    <div class="blog-detail__header">
+                        <div class="font-36px fw-bold">@blog.Title</div>
+                        <div class="subtitle__information">
+                            <div>@blog.BlogType</div>
+                            <div>@blog.PostedAt</div>
+                        </div>
+                    </div>
+                    <div class="blog-detail__body">
+                        @foreach (var item in blog.Content)
+                        {
+                            if (item.Type == "text")
+                            {
+                                <div>@item.Content</div>
+                            }
+                            else if (item.Type == "image")
+                            {
+                                <div>
+                                    <img src="@item.Content" class="blog-detail__img--modifier" alt="Blog Image" />
+                                </div>
+                            }
+                        }
+                    </div>
+
+                    <div class="blog-detail-rooms">
+                        <div class="header-slipper"></div>
+                        <div class="header-glasses"></div>
+                        <div class="rooms-header">
+                            <div class="font-24px">Recommend Rooms</div>
+                            <div>Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus</div>
+                        </div>
+
+                        <div class="rooms__body">
+                            <div class="swiper blog-rooms-slider">
+                                <div class="swiper-wrapper">
+
+                                    @foreach (var room in rooms)
+                                    {
+                                        <div class="swiper-slide">
+                                            <div class="card-group">
+                                                <div class="card card-modifier">
+                                                    @if (room?.roomTypePhotos != null && room.roomTypePhotos.Count > 0)
+                                                    {
+                                                        string img = room.roomTypePhotos.First();
+
+                                                        <img src="@(img)" alt="@(img.Split("/")[img.Split("/").Length-1])" class="card-img card__image--size centered-img">
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="/images/home/rooms-grid-1.png" alt="default image" class="card-img card__image--size centered-img">
+                                                    }                                                    <div class="card-img-overlay">
+                                                        <div class="aligner--left">
+                                                            <h5 class="card-title">@room.roomTypeName</h5>
+                                                            <div class="d-flex align-items-center font-14px">
+                                                                <span class="star-rating mr-2">
+                                                                    @* @for (int i = 0; i < Math.Floor(room.Stars); i++)
+                                                                    {
+                                                                        <span class="fa fa-star"></span>
+                                                                    }
+                                                                    @if (room.Stars % 1 != 0)
+                                                                    {
+                                                                        <span class="fa fa-star-half-o"></span>
+                                                                    }
+                                                                    @for (int i = (int)Math.Ceiling(room.Stars); i < 5; i++)
+                                                                    {
+                                                                        <span class="fa fa-star fa-star-o"></span>
+                                                                    } *@
+                                                                    <span class="fa fa-star"></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                </span> <!-- Star ratings -->
+                                                                <span class="text">@room.view views</span>
+                                                            </div>
+                                                            <p class="card-text card__price--blue">
+                                                                @{
+                                                                    @((room.price / 100).ToString("0.00"))
+                                                                }$
+                                                            </p>
+                                                            <p class="card-text card-content">@room.roomTypeDescription</p>
+                                                        </div>
+                                                        <a asp-area="" asp-controller="Rooms" asp-action="Detail" asp-route-slug="@room.slug" class="btn book-now-button">Book Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="align--center">
+                        <a asp-area="" asp-controller="Rooms" asp-action="Index" class="button-24" role="button">See all</a>
+                    </div>
+                </div>
+                <div class="col-md-5 side-bar__container">
+                    @await Html.PartialAsync("~/Views/Partial/_AnyHelpForm.cshtml")
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

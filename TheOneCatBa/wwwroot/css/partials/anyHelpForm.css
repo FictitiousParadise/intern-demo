@@ -1,0 +1,158 @@
+﻿:root {
+    --padding-side: clamp(20px, 2vw, 40px);
+}
+
+.sticky-help-form {
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 135px;
+}
+
+.help-form-container {
+    background-color: #0E91AC;
+    background-image: url(/images/patials/any-help-form-bg.png);
+    padding: 30px var(--padding-side);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.life-buoy {
+    position: absolute;
+    bottom: 100px;
+    right: -45px;
+    background-image: url(/images/blog/helper-form-donut.png);
+    background-size: 100% 100%;
+    width: 200px;
+    aspect-ratio: 223 / 231;
+    z-index: 1;
+}
+
+.flower--pink {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    background-image: url(/images/blog/helper-form-flower-pink.png);
+    background-size: 100% 100%;
+    width: 50px;
+    aspect-ratio: 51 / 52;
+    z-index: 1;
+}
+
+.flower--yellow {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-image: url(/images/blog/helper-form-flower-yellow.png);
+    background-size: 100% 100%;
+    width: 50px;
+    aspect-ratio: 60 / 57;
+    z-index: 1;
+}
+
+    .help-form-container h5 {
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .help-form-container .form-control, .btn-primary {
+        border-radius: 5px;
+    }
+
+    .help-form-container .btn-primary {
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: white;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: fit-content;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 3;
+    }
+
+        .help-form-container .btn-primary:hover,
+        .help-form-container .btn-primary:focus {
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+            color: rgba(0, 0, 0, 0.65);
+        }
+
+        .help-form-container .btn-primary:hover {
+            transform: translateY(-1px);
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .help-form-container .btn-primary:active {
+            background-color: #F0F0F1;
+            border-color: rgba(0, 0, 0, 0.15);
+            box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+            color: rgba(0, 0, 0, 0.65);
+            transform: translateY(0);
+        }
+
+    .help-form-container .form-control {
+        position: relative;
+        margin-bottom: 15px;
+        background-color: rgb(255, 255, 255, 0.6);
+        z-index: 3;
+    }
+
+        .help-form-container .form-control::-webkit-input-placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+
+        .help-form-container .form-control:-moz-placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+
+        .help-form-container .form-control::-moz-placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+
+        .help-form-container .form-control:-ms-input-placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+
+    @media(max-width: 768px) {
+        .help-form-container {
+            max-width: 100%;
+        }
+    }

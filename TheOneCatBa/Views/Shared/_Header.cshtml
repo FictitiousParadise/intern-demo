@@ -1,0 +1,114 @@
+﻿<link href="~/css/header.css" rel="stylesheet" />
+
+<header id="header-js">
+    @* header-top *@
+    <div class="header-top">
+        <div class="d-flex align-items-center justify-content-between padding-sides">
+
+            <div class="header-top-left">
+                <ul class="header-top-left-list d-flex align-items-center my-2">
+                    <li class="header-top-left-list-item me-3">
+                        <a href="">
+                            <img style="width: 18px; height: 18px" class="header-top-left-list-item header-bird" src="/images/icon/facebook-white.png" alt="ERROR">
+                        </a>
+                    </li>
+
+                    <li class="header-top-left-list-item me-3">
+                        <a href="">
+                            <img style="width: 18px; height: 18px" src="/images/icon/instagram-white.png" alt="ERROR">
+                        </a>
+                    </li>
+
+                    <li class="header-top-left-list-item me-3">
+                        <a href="">
+                            <img style="width: 18px; height: 18px" src="/images/icon/whatsapp-white.png" alt="ERROR">
+                        </a>
+                    </li>
+
+                    <li class="header-top-left-list-item me-3">
+                        <a href="">
+                            <img style="width: 18px; height: 18px" src="/images/icon/owl-white.png" alt="ERROR">
+                        </a>
+                    </li>
+
+                    <li class="header-top-left-list-item me-3">
+                        <a href="">
+                            <img style="width: 18px; height: 18px" src="/images/icon/google-white.png" alt="ERROR">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header-top-right">
+                <ul class="header-top-right-list d-flex align-items-center">
+                    <li class="header-top-right-list-item me-3">
+                        @* email Icon *@
+                        <a href="" class="item-link-header link-underline link-underline-opacity-0 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img style="width: 14px; height: 14px" src="/images/icon/email-white.png" alt="phone">  hello@travelhubvietnam.com
+                        </a>
+                    </li>
+
+                    <li class="header-top-right-list-item me-3">
+                        @* phone Icon *@
+                        <a href="" class="item-link-header link-underline link-underline-opacity-0 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img style="width: 14px; height: 14px" src="/images/icon/phone-white.png" alt="phone">  012345678
+                        </a>
+                    </li>
+
+                    <li class="header-top-right-list-item me-3">
+                        @* address Icon *@
+                        <a href="" class="item-link-header link-underline link-underline-opacity-0 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img style="width: 14px; aspect-ratio: 24 / 32" src="/images/icon/address-white.png" alt="phone"> 46Au Trieu, Hang Trong, Hoan Kiem, Hanoi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @* Navigation bar *@
+    <div id="header-bottom-js" class="header-bottom">
+        <div class="padding-sides">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 navbar-light">
+            <div class="container-fluid p-2">
+                @* Logo *@
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img style="width: 170px" src="~/images/logo/the-one-hostel-catba-logo-dark.png" alt="Logo">
+                </a>
+
+                @* Toggle *@
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                @* Link to other pages *@
+                <div class="collapse navbar-collapse flex-row-reverse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active me-3">
+                                <a class="nav-link nav-link-text current-page-js" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                        </li>
+                        <li class="nav-item me-3">
+                                <a class="nav-link nav-link-text current-page-js" asp-area="" asp-controller="Tour" asp-action="Index">TOURS</a>
+                        </li>
+                        <li class="nav-item me-3">
+                                <a class="nav-link nav-link-text current-page-js" asp-area="" asp-controller="Rooms" asp-action="Index">ROOMS</a>
+                        </li>
+                        <li class="nav-item me-3">
+                                <a class="nav-link nav-link-text current-page-js" asp-area="" asp-controller="Blog" asp-action="Index">BLOGS</a>
+                        </li>
+                        <li class="nav-item me-3">
+                                <a class="nav-link nav-link-text current-page-js" asp-area="" asp-controller="Home" asp-action="AboutUs">ABOUT US</a>
+                        </li>
+
+                        @* Button book-now *@
+                        <li class="nav-item mt-2">
+                            <a class="nav-link btn-book-now text-light" asp-controller="Home" asp-action="BookNow">BOOK NOW</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </div>
+</header>
+

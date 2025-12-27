@@ -1,0 +1,395 @@
+﻿@using TheOneCatBa.Utils
+@{
+    List<CloudbedsRoomType> rooms = ViewData["rooms"] as List<CloudbedsRoomType>;
+    List<Tours> tours = ViewData["tours"] as List<Tours>;
+    Page page = ViewData["page"] as Page;
+}
+
+<link href="~/css/home/home.css" rel="stylesheet" />
+
+<div class="bg-body bg-home body-align">
+
+    @* BANNER *@
+    <section class="section-banner section-bg">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    @* BOOK NOW FORM *@
+    @await Html.PartialAsync("~/Views/Partial/_BookNowForm.cshtml")
+
+    @* ROOMS SLIDER *@
+    <section class="rooms">
+        <div class="rooms-home">
+            <div class="rooms__header animation-trigger-fadeIn">
+                <div class="home-beach-items"></div>
+                <div class="font-36px caveat--text">ROOMS</div>
+                <div>Title acb abc abc abc abc abc</div>
+            </div>
+
+            <div class="rooms__body padding-sides animation-trigger-slideInBottom">
+                <div class="swiper rooms-slider">
+                    <div class="swiper-wrapper">
+
+                        @foreach (var room in rooms)
+                        {
+                            <div class="swiper-slide">
+                                <div class="card-group">
+                                    <div class="card card-modifier">
+                                        @if (room?.roomTypePhotos != null && room.roomTypePhotos.Count > 0)
+                                        {
+                                            string img = room.roomTypePhotos.First();
+
+                                            <img src="@(img)" alt="@(img.Split("/")[img.Split("/").Length-1])" class="card-img card__image--size centered-img">
+                                        }
+                                        else
+                                        {
+                                            <img src="/images/home/rooms-grid-1.png" alt="default image" class="card-img card__image--size centered-img">
+                                        }
+                                        <div class="card-img-overlay">
+                                            <div class="aligner--left">
+                                                <h5 class="card-title">@(room.roomTypeName)</h5>
+                                                <div class="d-flex align-items-center font-14px">
+                                                    <span class="star-rating mr-2">
+@*                                                         @for (int i = 0; i < Math.Floor(room.roomRate); i++)
+                                                        {
+                                                            <span class="fa fa-star"></span>
+                                                        }
+                                                        @if (room.roomRate % 1 != 0)
+                                                        {
+                                                            <span class="fa fa-star-half-o"></span>
+                                                        }
+                                                        @for (int i = (int)Math.Ceiling(room.roomRate); i < 5; i++)
+                                                        {
+                                                            <span class="fa fa-star fa-star-o"></span>
+                                                        } *@
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span> <!-- Star ratings -->
+                                                    <span class="text">? booked</span>
+                                                </div>
+                                                <p class="card-text card__price--blue">
+                                                    @DataHelper.ToCurrency(room.price)$
+                                                </p>
+                                                <p class="card-text card-content">@Html.Raw(room.roomTypeDescription)</p>
+                                            </div>
+                                            <a asp-area="" asp-controller="Rooms" asp-action="Detail" asp-route-slug="@(room.slug)" class="btn book-now-button">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    @* TOURS SLIDER *@
+    <section class="tours">
+        <div class="home-tours">
+            <div class="tour-splash"></div>
+            <div class="tours__header animation-trigger-fadeIn">
+                <div class="font-36px caveat--text">TOURS</div>
+                <div>Title acb abc abc abc abc abc</div>
+            </div>
+            <div class="tours__body padding-sides animation-trigger-slideInBottom">
+                <div class="swiper tours-slider">
+                    <div class="swiper-wrapper">
+
+                        @foreach (var tour in tours)
+                        {
+                            <div class="swiper-slide">
+                                <div class="card-group">
+                                    <div class="card tour-card-modifier">
+                                        <img src="@tour.Thumbnail" alt="@tour.ThumbnailAlt" class="card-img card__image--size centered-img">
+                                        <div class="card-img-overlay">
+                                            <div class="aligner--left">
+                                                <h5 class="card-title">@tour.Name</h5>
+                                                <div class="d-flex align-items-center font-14px">
+                                                    <span class="star-rating mr-2">
+                                                        @for (int i = 0; i < Math.Floor(tour.Stars); i++)
+                                                        {
+                                                            <span class="fa fa-star"></span>
+                                                        }
+                                                        @if (tour.Stars % 1 != 0)
+                                                        {
+                                                            <span class="fa fa-star-half-o"></span>
+                                                        }
+                                                        @for (int i = (int)Math.Ceiling(tour.Stars); i < 5; i++)
+                                                        {
+                                                            <span class="fa fa-star fa-star-o"></span>
+                                                        }
+                                                    </span>
+                                                    <span class="text">@tour.Booked booked</span>
+                                                </div>
+                                                <p class="card-text card__price--blue">
+                                                    @{
+                                                        @((tour.FinalPrice / 100).ToString("0.00"))
+                                                    }$
+                                                </p>
+                                                <p class="card-text card-content">@tour.ShortDescription</p>
+                                            </div>
+                                            <a asp-area="" asp-controller="Tour" asp-action="Detail" asp-route-slug="@tour.Slug" class="btn book-now-button">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* SECURITY *@
+    <section class="security">
+        <div class="home-security padding-sides header--spacing">
+            <div class="row g-0">
+                <div class="col-md-6 security__img-container animation-trigger-fadeIn">
+                    <div class="wrapper">
+                        <img src="/images/home/home-security-grid-1.jpg" alt="Big Picture" class="img-fluid overlay-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-push-6 overlay-content">
+                    <div class="middle-centered">
+                        <div class="animation-trigger-fadeIn">
+                            <div class="font-24px caveat--text">Safety</div>
+                            <div class="font-36px caveat--text">Why choose us</div>
+                            <div class="">sadjksahdsakdhsakhdkhdkádkjahsdkjádjkádkjsahdjkádjkahsdkạhsdhkjahdkahdkshsadjksahdsakdhsakhdkhdkádkjahsdkjádjkádkjsahdjkádjkahs</div>
+                        </div>
+                        @* safety widgets for big screens *@
+                        <div class="row g-0 safety-big-screen animation-trigger-slideInBottom">
+                            <div class="col">
+                                <div class="safety--padding">
+                                    <div class="row g-0 safety__widget">
+                                        <div class="col-md-4 safety-image__container"><img src="/images/icon/home-security-guard.png" class="safety-image--style" /></div>
+                                        <div class="col-md-8 safety-text__container text-dark-green">Private island</div>
+                                    </div>
+                                </div>
+                                <div class="safety--padding">
+                                    <div class="row g-0 safety__widget">
+                                        <div class="col-md-4 safety-image__container"><img src="/images/icon/home-security-guard.png" class="safety-image--style" /></div>
+                                        <div class="col-md-8 safety-text__container text-dark-green">Private island</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="safety--padding">
+                                    <div class="row g-0 safety__widget">
+                                        <div class="col-md-4 safety-image__container"><img src="/images/icon/home-security-like.png" class="safety-image--style" /></div>
+                                        <div class="col-md-8 safety-text__container text-dark-green">Private island</div>
+                                    </div>
+                                </div>
+                                <div class="safety--padding">
+                                    <div class="row g-0 safety__widget">
+                                        <div class="col-md-4 safety-image__container"><img src="/images/icon/home-security-location.png" class="safety-image--style widget__special-rule" /></div>
+                                        <div class="col-md-8 safety-text__container text-dark-green">Private island</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @* Safety widgets for small screens *@
+                        <div class="row g-0 safety-small-screen animation-trigger-slideInBottom">
+                            <div class="col">
+                                <div class="mobile-widget-padding">
+                                    <div class="row g-0 mobile-widget">
+                                        <div class="col-12 mobile-image-container"><img src="/images/icon/home-guard-mobile.png" class="mobile-widget-image" /></div>
+                                        <div class="col-12 mobile-widget__text">Private island</div>
+                                    </div>
+                                </div>
+                                <div class="mobile-widget-padding">
+                                    <div class="row g-0 mobile-widget">
+                                        <div class="col-12 mobile-image-container"><img src="/images/icon/home-guard-mobile.png" class="mobile-widget-image" /></div>
+                                        <div class="col-12 mobile-widget__text">Private island</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mobile-widget-padding">
+                                    <div class="row g-0 mobile-widget">
+                                        <div class="col-12 mobile-image-container"><img src="/images/icon/home-like-mobile.png" class="mobile-widget-image" /></div>
+                                        <div class="col-12 mobile-widget__text">Private island</div>
+                                    </div>
+                                </div>
+                                <div class="mobile-widget-padding">
+                                    <div class="row g-0 mobile-widget special-pad">
+                                        <div class="col-12 mobile-image-container"><img src="/images/icon/home-location-mobile.png" class="mobile-widget-image" /></div>
+                                        <div class="col-12 mobile-widget__text">Private island</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* REVIEW SLIDER *@
+    <section class="review">
+        <div class="home-review">
+            <div class="review-leaves"></div>
+            <div class="animation-trigger-slideInBottom">
+                <div class="review__header">
+                    <div class="font-36px caveat--text">Review</div>
+                    <div>Title acb abc abc abc abc abc</div>
+                </div>
+                <div class="review__body padding-sides">
+                    <!-- Slider main container -->
+                    <div class="swiper review-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="card-custom">
+                                    <div class="media mb-3 d-flex flex-row">
+                                        <div class="review-avatar-container p-2">
+                                            <div class="avatar-placeholder mr-3"></div>
+                                        </div>
+                                        <div class="media-body p-2">
+                                            <h5 class="mt-0">Guest Name</h5>
+                                            <div class="star-rating ml-2">
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star fa-star-o"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="font-14px aligner--left review-text">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-custom">
+                                    <div class="media mb-3 d-flex flex-row">
+                                        <div class="review-avatar-container p-2">
+                                            <div class="avatar-placeholder mr-3"></div>
+                                        </div>
+                                        <div class="media-body p-2">
+                                            <h5 class="mt-0">Guest Name</h5>
+                                            <div class="star-rating ml-2">
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star fa-star-o"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="font-14px aligner--left review-text">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-custom">
+                                    <div class="media mb-3 d-flex flex-row">
+                                        <div class="review-avatar-container p-2">
+                                            <div class="avatar-placeholder mr-3"></div>
+                                        </div>
+                                        <div class="media-body p-2">
+                                            <h5 class="mt-0">Guest Name</h5>
+                                            <div class="star-rating ml-2">
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star fa-star-o"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="font-14px aligner--left review-text">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    @* GALLERY *@
+    <section class="gallery">
+        <div class="home-gallery padding-sides">
+            <div class="gallery-slipper"></div>
+            <div class="gallery-glasses"></div>
+            <div class="gallery-header animation-trigger-fadeIn">
+                <div class="font-36px caveat--text">Gallery</div>
+                <div>Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus</div>
+            </div>
+            <div class="galerry-body animation-trigger-slideInBottom">
+                <div class="swiper gallery-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="gallery-container">
+                                <div class="d-flex flex-column">
+                                    <div class="gallery-image-bigger"><img src="/images/home/gallery-grid-1.png" alt="gal-1" /></div>
+                                    <div class="gallery-image-smaller"><img src="/images/home/gallery-grid-2.jpg" alt="gal-2" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-container">
+                                <div class="d-flex flex-column">
+                                    <div class="gallery-image-smaller"><img src="/images/home/gallery-grid-3.jpg" alt="gal-3" /></div>
+                                    <div class="gallery-image-bigger"><img src="/images/home/gallery-grid-4.png" alt="gal-4" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-container">
+                                <div class="d-flex flex-column">
+                                    <div class="gallery-image-bigger"><img src="/images/home/gallery-grid-5.jpg" alt="gal-5" /></div>
+                                    <div class="gallery-image-smaller"><img src="/images/home/gallery-grid-6.jpg" alt="gal-6" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-container">
+                                <div class="d-flex flex-column">
+                                    <div class="gallery-image-smaller"><img src="/images/home/gallery-grid-7.png" alt="gal-7" /></div>
+                                    <div class="gallery-image-bigger"><img src="/images/home/gallery-grid-8.jpg" alt="gal-8" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-container">
+                                <div class="d-flex flex-column">
+                                    <div class="gallery-image-bigger"><img src="/images/home/gallery-grid-9.png" alt="gal-9" /></div>
+                                    <div class="gallery-image-smaller"><img src="/images/home/gallery-grid-10.jpg" alt="gal-10" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-container">
+                                <div class="d-flex flex-column">
+                                    <div class="gallery-image-smaller"><img src="/images/home/gallery-grid-11.jpg" alt="gal-11" /></div>
+                                    <div class="gallery-image-bigger"><img src="/images/home/gallery-grid-12.png" alt="gal-12" /></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* FAQ *@
+    <section class="faq">
+        <div class="padding-sides">
+            @await Html.PartialAsync("~/Views/Partial/_Faq.cshtml")
+        </div>
+    </section>
+
+</div>
+

@@ -1,0 +1,1574 @@
+[
+  {
+    "Code": "abc123",
+    "Name": "The One Cat Ba Island 2D1N",
+    "PriceVND": 6094500,
+    "UnitRoom": 470000,
+    "PriceUSD": 5021,
+    "Discount": 0,
+    "Caption": "<p>Hot</br>Deal</p>",
+    "View": 1203,
+    "Booked": 962,
+    "Seq": 2,
+    "stars": 4.5,
+    "PercentageDiscount": false,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "2D1N Banner",
+    "Thumbnail": "/images/tour/tour-slide-1.jpg",
+    "ThumbnailAlt": "Tour Thumbnail",
+    "ImageMapAlt": "Tour Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "oasis-bay-party-cruise-the-one-island-escape",
+    "Highlight": "fixd",
+    "Inclusions": [
+      "Private boat transfers from Cang Ca Harbor to the Island and vice versa",
+      "Welcome drink",
+      "Rooms on the Island",
+      "Drinking water 01 bottle/pax in the room",
+      "Free Breakfast Buffet",
+      "Swimming, Kayaking, and billiards activities",
+      "Trekking to Freedom rock riffs",
+      "Ticket insurance and service fees are included in the Island program",
+      "BBQ Dinner"
+    ],
+    "Exclusions": [
+      "Tip",
+      "Drinks on the menu",
+      "Other services not mentioned above and personal expenses incurred in the program",
+      "VAT (A surcharge of 8% applies only to customers requesting a VAT Invoice)",
+      "Surcharge for public holidays (+$20)",
+      "Corkage fee for drinks brought on the island (if any)"
+    ],
+    "Overview": "Get ready to merge the wild pulse of Oasis Bay Party Cruises with the serene soul of One Island Escape for an ultimate collaborative adventure! Picture a fusion where party vibes meet tranquil island retreats, designed for those who thirst for the rhythm of the waves and the calm of the beach. Dive into a seamless blend of high-octane festivities and peaceful beachside rejuvenation, all while forging new bonds in the heart of Halong Bay's spectacular seascape. This alliance is your ticket to the ultimate escapade where every snapshot is a story, every encounter a memory, and the journey is just as thrilling as the destination. Pack light but bring all your energy — this is the collab tour that redefines the backpacker beat!",
+    "ShortDescription": "Voyage Vibes: A Lively Three-Day Journey of Island Hopping and Party Popping.",
+    "Destination": "Catba + Lan Ha Bay",
+    "Departure": "2024-06-01",
+    "Transport": "Bus",
+    "Duration": "3 Days 2 Nights",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": true,
+    "Itinerary": [
+      {
+        "Code": "itinerary1",
+        "TourCode": "abc123",
+        "DayTitle": "Party Cruise",
+        "DaySubTitle": "Day 1: Hanoi - Ha Long Bay - Oasis Bay Party Cruise",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail1",
+            "ItineraryCode": "itinerary1",
+            "Duration": "08:00 – 08:30",
+            "Title": "High-Energy Pickup",
+            "Content": "Get pumped as our lively guide meets you in the heart of Hanoi. Get pumped as our lively guide meets you in the heart of Hanoi.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD1_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD1_2"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD1_3"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD1_2323"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD1_241"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD1_15151"
+              }
+            ]
+          },
+          {
+            "Code": "detail2",
+            "ItineraryCode": "itinerary1",
+            "Duration": "12:15 - 12:30",
+            "Title": "Dock Arrival",
+            "Content": "Hit Tuan Chau Harbour and step into the vibes.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_2"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD2_3"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD2_3232324"
+              }
+            ]
+          },
+          {
+            "Code": "detail3",
+            "ItineraryCode": "itinerary1",
+            "Duration": "12:30 - 13:00",
+            "Title": "Cruise Kickoff",
+            "Content": "Jump on board the Oasis Bay Party Cruise, grab a welcome drink, and stash your stuff in your cool cabin. Jump on board the Oasis Bay Party Cruise, grab a welcome drink, and stash your stuff in your cool cabin.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD3_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD3_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail4",
+            "ItineraryCode": "itinerary1",
+            "Duration": "13:15 – 14:15",
+            "Title": "Feast and Friendships",
+            "Content": " Chow down on a Vietnamese feast and mingle – it's a social cruise, after all!",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD4_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD4_2"
+              }
+            ]
+          },
+
+          {
+            "Code": "detail5",
+            "ItineraryCode": "itinerary1",
+            "Duration": "15:30 – 17:30",
+            "Title": "Bay Thrills",
+            "Content": "Cruise to the raddest spots in Ha Long Bay, kayak through caves, and bounce on the water trampoline.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD5_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail6",
+            "ItineraryCode": "itinerary1",
+            "Duration": "19:30 – 19:40",
+            "Title": "Dinner Showdown",
+            "Content": "Kick back as our staff rocks a show, then dive into a mega dinner by Ha Long Bay’s top chefs.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD6_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail7",
+            "ItineraryCode": "itinerary1",
+            "Duration": "21:00 onwards",
+            "Title": "Nightlife Extravaganza",
+            "Content": "Hit the indoor lounge or the sundeck for dancing, card games, karaoke, and jacuzzi hangs with your new mates.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD7_1"
+              }
+            ]
+          }
+
+        ]
+      },
+      {
+        "Code": "itinerary2",
+        "TourCode": "abc123",
+        "DayTitle": "Party Cruise 2",
+        "DaySubTitle": "Day 2: Oasis Bay Party Cruise - The One Island Escape",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail1",
+            "ItineraryCode": "itinerary2",
+            "Duration": "06:45 – 8:00",
+            "Title": "Sunrise Vibes",
+            "Content": "Rise and shine with a buffet breakfast amid the stunning Ha Long Bay dawn.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_1_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_1_2"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD2_1_3"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD2_1_4"
+              }
+            ]
+          },
+          {
+            "Code": "detail2",
+            "ItineraryCode": "itinerary2",
+            "Duration": "8:40 – 9:00",
+            "Title": "Check-out Sprint",
+            "Content": "Settle the bill pronto – the next adventure awaits.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_2_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_2_2"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD2_2_3"
+              }
+            ]
+          },
+          {
+            "Code": "detail3",
+            "ItineraryCode": "itinerary2",
+            "Duration": "9:30 - 11:30",
+            "Title": "Speedboat Thrills",
+            "Content": "<p>Our speedboat will pick you up, zip to Van Boi Beach for sightseeing, boat jumping, and epic swimming.<br><strong>Note: During colder weather, an option of visiting the fishing village may be advised.</strong></p>",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_3_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_3_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail4",
+            "ItineraryCode": "itinerary2",
+            "Duration": "11:30 - 11:50",
+            "Title": "Turbo Transfer",
+            "Content": "<p>Speedboat to The One Island Escape – the last exclusive island in Cat Ba.<br><strong>Note: In case of bad weather, instead of transferring you immediately to the island, we'll send you to Gia Luan Harbour first until it os safe to resume your journey to the island.</strong></p>",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_4_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_4_2"
+              }
+            ]
+          },
+
+          {
+            "Code": "detail5",
+            "ItineraryCode": "itinerary2",
+            "Duration": "11:50 - 12:00",
+            "Title": "Island Welcome Jam",
+            "Content": "Grab a welcome drink, get island intel, and get ready to dive into a chef's special lunch.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_5_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail6",
+            "ItineraryCode": "itinerary2",
+            "Duration": "12:00 - 13:00 ",
+            "Title": "Lunch Treats",
+            "Content": "Nothing tastes better than food made with love. Enjoy our chef's special authentic lunch menu.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_6_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_6_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail7",
+            "ItineraryCode": "itinerary2",
+            "Duration": "13:00 - 13:30",
+            "Title": "Room Chill",
+            "Content": "Drop your bags in your chill room – it's time to relax.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_7_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_7_2"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_7_3"
+              }
+            ]
+          },
+          {
+            "Code": "detail8",
+            "ItineraryCode": "itinerary2",
+            "Duration": "14:00 - 15:30",
+            "Title": "Free-wheeling Fun",
+            "Content": "<p>Free time: Explore the private island! Make the most of your island escape with these fun activities:<br></p><ol><li>Beach Volleyball - Can't go to the beach and not play beach volleyball...<br></li><li>Frisbee - The best way to enjoy the island breeze!<br></li><li>Billiards - Play a fun (or competitive) game of billiards with your new (and old) friends.<br></li><li>Swimming - Have a splashing good time at our private beach.<br></li><li>Paddleboarding - Get on your board and paddle around or even go racing with your new mates</li></ol>",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_8_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_8_2"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-3.jpg",
+                "Alt": "oasD2_8_3"
+              }
+            ]
+          },
+          {
+            "Code": "detail9",
+            "ItineraryCode": "itinerary2",
+            "Duration": "15:30 – 16:30",
+            "Title": "Adventure Call",
+            "Content": "<p>Adventure time! Rain or shine, nothing's stopping us from having fun.<br><strong>Option 1 :&nbsp; </strong>Good weather for sailing Visit the Thung Cave by tender<br><strong>Option 2 :</strong>&nbsp; Weather is not good for sailing The waves may be too high for us to sail to the Thung Cave, but we can always have fun on land! Go on an easy trek with our English-speaking tour guide in Ghenh Tu Do.</p>",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_9_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD2_9_2"
+              }
+
+            ]
+          },
+          {
+            "Code": "detail10",
+            "ItineraryCode": "itinerary2",
+            "Duration": "16:30 – 17:30",
+            "Title": "Recharge Time",
+            "Content": "Take a break to recharge for the evening's antics.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_10_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail11 ",
+            "ItineraryCode": "itinerary2",
+            "Duration": "17:30 – 18:30",
+            "Title": "Sunset Chill",
+            "Content": "Lounge on the beach, sip a drink, and catch the sunset – your drink helps a good cause!",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_11_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail12 ",
+            "ItineraryCode": "itinerary2",
+            "Duration": "19:00 – 20:30",
+            "Title": "BBQ Beach Bash",
+            "Content": "The chefs put on a show with a beachside BBQ – an unforgettable island dinner.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_12_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail13 ",
+            "ItineraryCode": "itinerary2",
+            "Duration": "20:30 onwards",
+            "Title": "Bonfire Bash",
+            "Content": "Gather around the bonfire for an epic island party under the stars.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_122"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary3",
+        "TourCode": "abc123",
+        "DayTitle": "Party Cruise: Final",
+        "DaySubTitle": "Day 3: The One Island Escape - Hanoi",
+        "Day": 3,
+        "ItineraryDetails": [
+          {
+            "Code": "detail1",
+            "ItineraryCode": "itinerary3",
+            "Duration": "05:30 – 06:00",
+            "Title": "Sunrise Fiesta",
+            "Content": "Get up early and catch the sky on fire with a vibrant sunrise over the island.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_1234"
+              }
+            ]
+          },
+          {
+            "Code": "detail2",
+            "ItineraryCode": "itinerary3",
+            "Duration": "07:00 – 09:00",
+            "Title": "Buffet Breakfast Bonanza",
+            "Content": "Fuel up with a hearty buffet breakfast surrounded by the island's morning zen.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD3_2_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-2.jpg",
+                "Alt": "oasD3_2_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail3",
+            "ItineraryCode": "itinerary3",
+            "Duration": "09:00 – 09:30",
+            "Title": "Speedboat Shuffle",
+            "Content": "Zip back to the Oasis Bay Party Cruise for the next leg of the adventure.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD5_113241"
+              }
+            ]
+          },
+          {
+            "Code": "detail4",
+            "ItineraryCode": "itinerary3",
+            "Duration": "9:45 - 10:30",
+            "Title": "Vietnamese Flavor Workshop",
+            "Content": "Dive into a hands-on workshop and learn the secrets behind crafting popular Vietnamese dishes.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD3_4_1"
+              }
+            ]
+          },
+
+          {
+            "Code": "detail5",
+            "ItineraryCode": "itinerary3",
+            "Duration": "10:30 - 11:15",
+            "Title": "10:30 - 11:15",
+            "Content": "Fuel up for the trip back to Hanoi with a delicious brunch onboard.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD5_432525"
+              }
+            ]
+          },
+          {
+            "Code": "detail6",
+            "ItineraryCode": "itinerary3",
+            "Duration": "11:15 - 12:00 ",
+            "Title": "Transfer Groove",
+            "Content": "Hop on the transfer boat and bid adieu to the island as you head back to Tuan Chau Harbour.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD3_6_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail7",
+            "ItineraryCode": "itinerary3",
+            "Duration": "12:15 – 12:30",
+            "Title": "Departure Beat",
+            "Content": "Cruise away from Tuan Chau Harbour, leaving behind an awesome island adventure.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD2_131313311"
+              }
+            ]
+          },
+          {
+            "Code": "detail8",
+            "ItineraryCode": "itinerary3",
+            "Duration": "16:00 – 17:00",
+            "Title": "Old Quarter Revival",
+            "Content": "Roll back into the Old Quarter, Hanoi, with stories to tell and memories to cherish.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "oasD3_8_1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "def456",
+    "Name": "Halong Bay Luxury Cruise 3D2N",
+    "PriceVND": 8095500,
+    "UnitRoom": 580000,
+    "PriceUSD": 6670,
+    "Discount": 10,
+    "Caption": "<p>Special</br>Offer</p>",
+    "View": 2050,
+    "Booked": 1500,
+    "Seq": 1,
+    "stars": 5,
+    "PercentageDiscount": true,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "Luxury Cruise Banner",
+    "Thumbnail": "/images/tour/tour-slide-2.jpg",
+    "ThumbnailAlt": "Luxury Cruise Thumbnail",
+    "ImageMapAlt": "Luxury Cruise Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "halong-bay-luxury-cruise",
+    "Highlight": "Luxury",
+    "Inclusions": [
+      "Luxury boat transfers",
+      "Welcome champagne",
+      "Premium rooms",
+      "Complimentary bottled water",
+      "Gourmet meals",
+      "Snorkeling and kayaking",
+      "Sunset party on the deck",
+      "Onboard entertainment",
+      "Cooking class"
+    ],
+    "Exclusions": [
+      "Tips",
+      "Additional drinks",
+      "Personal expenses",
+      "VAT (8%)",
+      "Surcharge for public holidays (+$30)"
+    ],
+    "Overview": "Indulge in the ultimate Halong Bay experience with our luxury cruise package. Enjoy top-notch amenities, breathtaking views, and a range of activities designed to provide an unforgettable adventure on the water.",
+    "ShortDescription": "Luxury Cruise: A 3-day, 2-night journey through Halong Bay.",
+    "Destination": "Halong Bay",
+    "Departure": "2024-07-01",
+    "Transport": "Boat",
+    "Duration": "3 Days 2 Nights",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": true,
+    "Itinerary": [
+      {
+        "Code": "itinerary4",
+        "TourCode": "def456",
+        "DayTitle": "Luxury Cruise Day 1",
+        "DaySubTitle": "Day 1: Hanoi - Halong Bay",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail8",
+            "ItineraryCode": "itinerary4",
+            "Duration": "08:00 – 08:30",
+            "Title": "Pick-up from Hotel",
+            "Content": "Our luxury shuttle will pick you up from your hotel in Hanoi and transfer you to Halong Bay.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD1_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD1_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail9",
+            "ItineraryCode": "itinerary4",
+            "Duration": "12:15 - 12:30",
+            "Title": "Welcome Aboard",
+            "Content": "Arrive at Halong Bay and board the luxury cruise ship. Enjoy a welcome drink as you settle into your cabin.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD1_3"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD1_4"
+              }
+            ]
+          },
+          {
+            "Code": "detail10",
+            "ItineraryCode": "itinerary4",
+            "Duration": "12:30 - 13:00",
+            "Title": "Lunch Buffet",
+            "Content": "Savor a gourmet buffet lunch as the cruise begins its journey through the stunning landscapes of Halong Bay.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD1_5"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD1_6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary5",
+        "TourCode": "def456",
+        "DayTitle": "Luxury Cruise Day 2",
+        "DaySubTitle": "Day 2: Halong Bay",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail11",
+            "ItineraryCode": "itinerary5",
+            "Duration": "06:30 – 07:30",
+            "Title": "Morning Tai Chi",
+            "Content": "Start your day with a Tai Chi session on the deck, followed by a light breakfast.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD2_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD2_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail12",
+            "ItineraryCode": "itinerary5",
+            "Duration": "08:00 - 10:00",
+            "Title": "Kayaking Adventure",
+            "Content": "Explore hidden caves and lagoons by kayak, guided by our expert staff.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD2_3"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD2_4"
+              }
+            ]
+          },
+          {
+            "Code": "detail13",
+            "ItineraryCode": "itinerary5",
+            "Duration": "12:00 - 13:30",
+            "Title": "Beach BBQ",
+            "Content": "Enjoy a barbecue lunch on a private beach, complete with fresh seafood and local specialties.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD2_5"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD2_6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary6",
+        "TourCode": "def456",
+        "DayTitle": "Luxury Cruise Day 3",
+        "DaySubTitle": "Day 3: Halong Bay - Hanoi",
+        "Day": 3,
+        "ItineraryDetails": [
+          {
+            "Code": "detail14",
+            "ItineraryCode": "itinerary6",
+            "Duration": "06:30 – 07:30",
+            "Title": "Tai Chi & Breakfast",
+            "Content": "Another morning Tai Chi session, followed by a full breakfast buffet.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD3_1"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD3_2"
+              }
+            ]
+          },
+          {
+            "Code": "detail15",
+            "ItineraryCode": "itinerary6",
+            "Duration": "08:00 - 09:30",
+            "Title": "Cooking Class",
+            "Content": "Participate in a cooking class and learn to make traditional Vietnamese dishes.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD3_3"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD3_4"
+              }
+            ]
+          },
+          {
+            "Code": "detail16",
+            "ItineraryCode": "itinerary6",
+            "Duration": "10:00 - 11:00",
+            "Title": "Farewell Brunch",
+            "Content": "Enjoy a farewell brunch as the cruise heads back to the harbor.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD3_5"
+              },
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "luxD3_6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "ghi789",
+    "Name": "Sapa Trekking Adventure 3D2N",
+    "PriceVND": 4500000,
+    "UnitRoom": 300000,
+    "PriceUSD": 3700,
+    "Discount": 5,
+    "Caption": "<p>Early</br>Bird</p>",
+    "View": 1500,
+    "Booked": 1300,
+    "Seq": 3,
+    "stars": 4.5,
+    "PercentageDiscount": true,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "Sapa Trekking Image",
+    "Thumbnail": "/images/tour/tour-slide-3.jpg",
+    "ThumbnailAlt": "Sapa Trekking Thumbnail",
+    "ImageMapAlt": "Sapa Trekking Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "sapa-trekking-adventure",
+    "Highlight": "Adventure",
+    "Inclusions": [
+      "Guided trekking tours",
+      "Homestay accommodations",
+      "Meals included",
+      "Local transportation",
+      "Entrance fees"
+    ],
+    "Exclusions": [
+      "Tips",
+      "Personal expenses",
+      "VAT (8%)"
+    ],
+    "Overview": "Experience the breathtaking landscapes of Sapa with our guided trekking adventure. Enjoy homestays, local cuisine, and the rich culture of the region.",
+    "ShortDescription": "Trekking Adventure: A 3-day, 2-night exploration of Sapa.",
+    "Destination": "Sapa",
+    "Departure": "2024-08-01",
+    "Transport": "Bus",
+    "Duration": "3 Days 2 Nights",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": false,
+    "Itinerary": [
+      {
+        "Code": "itinerary7",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 1",
+        "DaySubTitle": "Day 1: Hanoi - Sapa",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail17",
+            "ItineraryCode": "itinerary7",
+            "Duration": "07:00 – 12:00",
+            "Title": "Transfer to Sapa",
+            "Content": "Travel from Hanoi to Sapa by bus. Enjoy the scenic views along the way.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail18",
+            "ItineraryCode": "itinerary7",
+            "Duration": "14:00 - 17:00",
+            "Title": "Trekking to Cat Cat Village",
+            "Content": "Start your trekking adventure to Cat Cat Village, visiting local homes and learning about their culture.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary8",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 2",
+        "DaySubTitle": "Day 2: Sapa",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail19",
+            "ItineraryCode": "itinerary8",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Lao Chai and Ta Van",
+            "Content": "Continue your trekking through rice terraces and stunning landscapes to Lao Chai and Ta Van villages.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail20",
+            "ItineraryCode": "itinerary8",
+            "Duration": "14:00 - 17:00",
+            "Title": "Interaction with Local Community",
+            "Content": "Spend the afternoon interacting with the local community and learning about their daily life.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary9",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 3",
+        "DaySubTitle": "Day 3: Sapa - Hanoi",
+        "Day": 3,
+        "ItineraryDetails": [
+          {
+            "Code": "detail21",
+            "ItineraryCode": "itinerary9",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Giang Ta Chai",
+            "Content": "Enjoy a morning trek to Giang Ta Chai village before heading back to Sapa for your return to Hanoi.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD3_1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "ghi789",
+    "Name": "Sapa Trekking Adventure 3D2N",
+    "PriceVND": 4500000,
+    "UnitRoom": 300000,
+    "PriceUSD": 3700,
+    "Discount": 5,
+    "Caption": "<p>Early</br>Bird</p>",
+    "View": 1500,
+    "Booked": 1300,
+    "Seq": 3,
+    "stars": 4.5,
+    "PercentageDiscount": true,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "Sapa Trekking Image",
+    "Thumbnail": "/images/tour/tour-slide-3.jpg",
+    "ThumbnailAlt": "Sapa Trekking Thumbnail",
+    "ImageMapAlt": "Sapa Trekking Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "sapa-trekking-adventure",
+    "Highlight": "Adventure",
+    "Inclusions": [
+      "Guided trekking tours",
+      "Homestay accommodations",
+      "Meals included",
+      "Local transportation",
+      "Entrance fees"
+    ],
+    "Exclusions": [
+      "Tips",
+      "Personal expenses",
+      "VAT (8%)"
+    ],
+    "Overview": "Experience the breathtaking landscapes of Sapa with our guided trekking adventure. Enjoy homestays, local cuisine, and the rich culture of the region.",
+    "ShortDescription": "Trekking Adventure: A 3-day, 2-night exploration of Sapa.",
+    "Destination": "Sapa",
+    "Departure": "2024-08-01",
+    "Transport": "Bus",
+    "Duration": "3 Days 2 Nights",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": false,
+    "Itinerary": [
+      {
+        "Code": "itinerary7",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 1",
+        "DaySubTitle": "Day 1: Hanoi - Sapa",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail17",
+            "ItineraryCode": "itinerary7",
+            "Duration": "07:00 – 12:00",
+            "Title": "Transfer to Sapa",
+            "Content": "Travel from Hanoi to Sapa by bus. Enjoy the scenic views along the way.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail18",
+            "ItineraryCode": "itinerary7",
+            "Duration": "14:00 - 17:00",
+            "Title": "Trekking to Cat Cat Village",
+            "Content": "Start your trekking adventure to Cat Cat Village, visiting local homes and learning about their culture.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary8",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 2",
+        "DaySubTitle": "Day 2: Sapa",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail19",
+            "ItineraryCode": "itinerary8",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Lao Chai and Ta Van",
+            "Content": "Continue your trekking through rice terraces and stunning landscapes to Lao Chai and Ta Van villages.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail20",
+            "ItineraryCode": "itinerary8",
+            "Duration": "14:00 - 17:00",
+            "Title": "Interaction with Local Community",
+            "Content": "Spend the afternoon interacting with the local community and learning about their daily life.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary9",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 3",
+        "DaySubTitle": "Day 3: Sapa - Hanoi",
+        "Day": 3,
+        "ItineraryDetails": [
+          {
+            "Code": "detail21",
+            "ItineraryCode": "itinerary9",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Giang Ta Chai",
+            "Content": "Enjoy a morning trek to Giang Ta Chai village before heading back to Sapa for your return to Hanoi.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD3_1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "ghi789",
+    "Name": "Sapa Trekking Adventure 3D2N",
+    "PriceVND": 4500000,
+    "UnitRoom": 300000,
+    "PriceUSD": 3700,
+    "Discount": 5,
+    "Caption": "<p>Early</br>Bird</p>",
+    "View": 1500,
+    "Booked": 1300,
+    "Seq": 3,
+    "stars": 4.5,
+    "PercentageDiscount": true,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "Sapa Trekking Image",
+    "Thumbnail": "/images/tour/tour-slide-3.jpg",
+    "ThumbnailAlt": "Sapa Trekking Thumbnail",
+    "ImageMapAlt": "Sapa Trekking Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "sapa-trekking-adventure",
+    "Highlight": "Adventure",
+    "Inclusions": [
+      "Guided trekking tours",
+      "Homestay accommodations",
+      "Meals included",
+      "Local transportation",
+      "Entrance fees"
+    ],
+    "Exclusions": [
+      "Tips",
+      "Personal expenses",
+      "VAT (8%)"
+    ],
+    "Overview": "Experience the breathtaking landscapes of Sapa with our guided trekking adventure. Enjoy homestays, local cuisine, and the rich culture of the region.",
+    "ShortDescription": "Trekking Adventure: A 3-day, 2-night exploration of Sapa.",
+    "Destination": "Sapa",
+    "Departure": "2024-08-01",
+    "Transport": "Bus",
+    "Duration": "3 Days 2 Nights",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": false,
+    "Itinerary": [
+      {
+        "Code": "itinerary7",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 1",
+        "DaySubTitle": "Day 1: Hanoi - Sapa",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail17",
+            "ItineraryCode": "itinerary7",
+            "Duration": "07:00 – 12:00",
+            "Title": "Transfer to Sapa",
+            "Content": "Travel from Hanoi to Sapa by bus. Enjoy the scenic views along the way.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail18",
+            "ItineraryCode": "itinerary7",
+            "Duration": "14:00 - 17:00",
+            "Title": "Trekking to Cat Cat Village",
+            "Content": "Start your trekking adventure to Cat Cat Village, visiting local homes and learning about their culture.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary8",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 2",
+        "DaySubTitle": "Day 2: Sapa",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail19",
+            "ItineraryCode": "itinerary8",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Lao Chai and Ta Van",
+            "Content": "Continue your trekking through rice terraces and stunning landscapes to Lao Chai and Ta Van villages.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail20",
+            "ItineraryCode": "itinerary8",
+            "Duration": "14:00 - 17:00",
+            "Title": "Interaction with Local Community",
+            "Content": "Spend the afternoon interacting with the local community and learning about their daily life.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary9",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 3",
+        "DaySubTitle": "Day 3: Sapa - Hanoi",
+        "Day": 3,
+        "ItineraryDetails": [
+          {
+            "Code": "detail21",
+            "ItineraryCode": "itinerary9",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Giang Ta Chai",
+            "Content": "Enjoy a morning trek to Giang Ta Chai village before heading back to Sapa for your return to Hanoi.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD3_1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "ghi789",
+    "Name": "Sapa Trekking Adventure 3D2N",
+    "PriceVND": 4500000,
+    "UnitRoom": 300000,
+    "PriceUSD": 3700,
+    "Discount": 5,
+    "Caption": "<p>Early</br>Bird</p>",
+    "View": 1500,
+    "Booked": 1300,
+    "Seq": 3,
+    "stars": 4.5,
+    "PercentageDiscount": true,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "Sapa Trekking Image",
+    "Thumbnail": "/images/tour/tour-slide-3.jpg",
+    "ThumbnailAlt": "Sapa Trekking Thumbnail",
+    "ImageMapAlt": "Sapa Trekking Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "sapa-trekking-adventure",
+    "Highlight": "Adventure",
+    "Inclusions": [
+      "Guided trekking tours",
+      "Homestay accommodations",
+      "Meals included",
+      "Local transportation",
+      "Entrance fees"
+    ],
+    "Exclusions": [
+      "Tips",
+      "Personal expenses",
+      "VAT (8%)"
+    ],
+    "Overview": "Experience the breathtaking landscapes of Sapa with our guided trekking adventure. Enjoy homestays, local cuisine, and the rich culture of the region.",
+    "ShortDescription": "Trekking Adventure: A 3-day, 2-night exploration of Sapa.",
+    "Destination": "Sapa",
+    "Departure": "2024-08-01",
+    "Transport": "Bus",
+    "Duration": "3 Days 2 Nights",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": false,
+    "Itinerary": [
+      {
+        "Code": "itinerary7",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 1",
+        "DaySubTitle": "Day 1: Hanoi - Sapa",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail17",
+            "ItineraryCode": "itinerary7",
+            "Duration": "07:00 – 12:00",
+            "Title": "Transfer to Sapa",
+            "Content": "Travel from Hanoi to Sapa by bus. Enjoy the scenic views along the way.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail18",
+            "ItineraryCode": "itinerary7",
+            "Duration": "14:00 - 17:00",
+            "Title": "Trekking to Cat Cat Village",
+            "Content": "Start your trekking adventure to Cat Cat Village, visiting local homes and learning about their culture.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD1_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary8",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 2",
+        "DaySubTitle": "Day 2: Sapa",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail19",
+            "ItineraryCode": "itinerary8",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Lao Chai and Ta Van",
+            "Content": "Continue your trekking through rice terraces and stunning landscapes to Lao Chai and Ta Van villages.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail20",
+            "ItineraryCode": "itinerary8",
+            "Duration": "14:00 - 17:00",
+            "Title": "Interaction with Local Community",
+            "Content": "Spend the afternoon interacting with the local community and learning about their daily life.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD2_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary9",
+        "TourCode": "ghi789",
+        "DayTitle": "Trekking Adventure Day 3",
+        "DaySubTitle": "Day 3: Sapa - Hanoi",
+        "Day": 3,
+        "ItineraryDetails": [
+          {
+            "Code": "detail21",
+            "ItineraryCode": "itinerary9",
+            "Duration": "08:00 – 12:00",
+            "Title": "Trekking to Giang Ta Chai",
+            "Content": "Enjoy a morning trek to Giang Ta Chai village before heading back to Sapa for your return to Hanoi.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "trekD3_1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "jkl012",
+    "Name": "Mekong Delta Experience 2D1N",
+    "PriceVND": 3400000,
+    "UnitRoom": 200000,
+    "PriceUSD": 2800,
+    "Discount": 7,
+    "Caption": "<p>Discount</br>Available</p>",
+    "View": 1200,
+    "Booked": 1000,
+    "Seq": 4,
+    "stars": 3.5,
+    "PercentageDiscount": true,
+    "DetailBanner": "/uploads/tours/tour-detail-banner.jpg",
+    "DetailBannerAlt": "Mekong Delta Banner",
+    "Thumbnail": "/images/tour/tour-slide-3.jpg",
+    "ThumbnailAlt": "Mekong Delta Thumbnail",
+    "ImageMapAlt": "Mekong Delta Map",
+    "Gallery": [
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-1.jpg",
+        "Alt": "Tour Detail 1"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-2.jpg",
+        "Alt": "Tour Detail 2"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-3.jpg",
+        "Alt": "Tour Detail 3"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-4.jpg",
+        "Alt": "Tour Detail 4"
+      },
+      {
+        "Url": "/uploads/tours/tour-gallery-detail-5.jpg",
+        "Alt": "Tour Detail 5"
+      }
+    ],
+    "Slug": "mekong-delta-experience",
+    "Highlight": "Nature",
+    "Inclusions": [
+      "Boat tours",
+      "Homestay accommodation",
+      "Meals included",
+      "Local transportation",
+      "Entrance fees"
+    ],
+    "Exclusions": [
+      "Tips",
+      "Personal expenses",
+      "VAT (8%)"
+    ],
+    "Overview": "Explore the vibrant Mekong Delta with our 2-day, 1-night experience. Enjoy boat tours, local cuisine, and homestays in this unique region.",
+    "ShortDescription": "Mekong Delta: A 2-day, 1-night exploration of the Mekong region.",
+    "Destination": "Mekong Delta",
+    "Departure": "2024-09-01",
+    "Transport": "Boat",
+    "Duration": "2 Days 1 Night",
+    "IsPublic": true,
+    "IsPopular": true,
+    "IsBestSeller": false,
+    "Itinerary": [
+      {
+        "Code": "itinerary10",
+        "TourCode": "jkl012",
+        "DayTitle": "Mekong Delta Day 1",
+        "DaySubTitle": "Day 1: Ho Chi Minh City - Mekong Delta",
+        "Day": 1,
+        "ItineraryDetails": [
+          {
+            "Code": "detail22",
+            "ItineraryCode": "itinerary10",
+            "Duration": "08:00 – 12:00",
+            "Title": "Transfer to Mekong Delta",
+            "Content": "Travel from Ho Chi Minh City to the Mekong Delta by bus. Enjoy the scenic views along the way.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "mekongD1_1"
+              }
+            ]
+          },
+          {
+            "Code": "detail23",
+            "ItineraryCode": "itinerary10",
+            "Duration": "14:00 - 17:00",
+            "Title": "Boat Tour",
+            "Content": "Take a boat tour through the Mekong Delta, visiting local markets and floating villages.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "mekongD1_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Code": "itinerary11",
+        "TourCode": "jkl012",
+        "DayTitle": "Mekong Delta Day 2",
+        "DaySubTitle": "Day 2: Mekong Delta - Ho Chi Minh City",
+        "Day": 2,
+        "ItineraryDetails": [
+          {
+            "Code": "detail24",
+            "ItineraryCode": "itinerary11",
+            "Duration": "08:00 – 12:00",
+            "Title": "Exploration and Return",
+            "Content": "Explore more of the Mekong Delta in the morning before heading back to Ho Chi Minh City.",
+            "Images": [
+              {
+                "Url": "/images/tour/tour-carousel-1.jpg",
+                "Alt": "mekongD2_1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

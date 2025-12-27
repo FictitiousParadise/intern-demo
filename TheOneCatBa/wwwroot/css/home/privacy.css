@@ -1,0 +1,53 @@
+﻿.body-align {
+    max-width: 1920px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-privacy {
+    background: rgb(168,243,249);
+    background: linear-gradient(180deg, rgba(168,243,249,1) 0%, rgba(18,116,140,1) 100%);
+    padding-bottom: 60px;
+}
+
+/* BANNER */
+.banner-content {
+    background-image: url(/images/aboutUs/banner-waves.png);
+    top: unset;
+    left: unset;
+    bottom: -280px;
+    right: -10px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-y: center;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1450px;
+    height: 800px;
+}
+
+/* Content */
+.privacy__content {
+    padding: 5px 20px;
+    text-align: left;
+    position: relative;
+}
+
+.star-fish {
+    position: absolute;
+    top: -160px;
+    right: 10px;
+    background-image: url(/images/aboutUs/banner-star-fish.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 300px;
+    aspect-ratio: 406 / 300;
+}
+
+.header-text {
+    color: var(--main-text-dark);
+    font-size: var(--font-size-36px);
+    padding: 20px;
+    text-align: left;
+}

@@ -1,0 +1,86 @@
+# ----------------------------
+# Build & Output
+# ----------------------------
+bin/
+obj/
+x64/
+x86/
+Debug/
+Release/
+
+# ----------------------------
+# Visual Studio
+# ----------------------------
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.opendb
+*.sdf
+
+# ----------------------------
+# Temporary & cache
+# ----------------------------
+*.tmp
+*.tmp_proj
+*.rsp
+*.cache
+*.cachefile
+
+# ----------------------------
+# Logs & dumps
+# ----------------------------
+*.log
+*.dmp
+*.dump
+*.stackdump
+
+# ----------------------------
+# Build artifacts
+# ----------------------------
+*.obj
+*.exe
+*.dll
+*.pdb
+*.idb
+*.ilk
+*.tlog
+
+# ----------------------------
+# Precompiled headers
+# ----------------------------
+*.ipch
+*.pch
+
+# ----------------------------
+# Secrets & environment
+# ----------------------------
+appsettings.json
+appsettings.*.json
+.env
+.env.*
+
+# ----------------------------
+# OS files
+# ----------------------------
+desktop.ini
+Thumbs.db
+
+# ----------------------------
+# CMake (optional)
+# ----------------------------
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# ----------------------------
+# NuGet
+# ----------------------------
+packages/
+*.nupkg
+.nuget/

@@ -1,0 +1,29 @@
+﻿@model TheOneCatBa.Models.Banner
+
+<section class="section-banner section-bg" style="background-image:url('@Model.Image.Url')">
+    <div class="container">
+        <div class="section-banner-main">
+            <div class="banner-content"></div>
+            <div class="banner-text">
+                <div class="banner-text__header">@Model.Heading</div>
+                <div class="banner-text__heading-sub">@Model.SubHeading</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section-banner {
+        height: 700px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-bg {
+        width: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: cover;
+    }
+</style>

@@ -1,0 +1,190 @@
+[
+  {
+    "code": "blog1",
+    "title": "Is Vietnam safe to Travel? – Your guide to travel safety in Vietnam",
+    "shortDescription": "Vietnam is a beautiful country with rich culture and history. It's a popular travel destination for many, but safety is always a concern for travelers. In this guide, we'll cover everything you need to know about travel safety in Vietnam.",
+    "slug": "is-vietnam-safe-to-travel-your-guide-to-travel-safety-in-vietnam",
+    "blogType": "Travel experience",
+    "postedAt": "February 29, 2024",
+    "author": "John Doe",
+    "thumbnail": "images/blog/card-item-1.jpg",
+    "thumbnailAlt": "Vietnam travel safety guide thumbnail",
+    "detailBanner": "/images/blog/banner-blog-detail.jpg",
+    "detailBannerAlt": "Vietnam travel safety guide",
+    "highlighted": true,
+    "content": [
+      {
+        "type": "text",
+        "content": "Vietnam is a beautiful country with rich culture and history. It's a popular travel destination for many, but safety is always a concern for travelers. In this guide, we'll cover everything you need to know about travel safety in Vietnam."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-1.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Before you travel, it's essential to understand the local customs and laws. Vietnam has a different culture and way of life, and being respectful and aware of these differences can enhance your travel experience."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Health and safety are top priorities when traveling. Make sure to get the necessary vaccinations before your trip, and always drink bottled water to avoid stomach issues. Keep a basic first aid kit with you for any minor injuries or illnesses."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Transportation in Vietnam can be chaotic, especially in big cities like Hanoi and Ho Chi Minh City. Always be cautious when crossing the streets, as traffic can be unpredictable. Using reputable taxi services or ride-sharing apps is recommended for getting around safely."
+      }
+    ]
+  },
+  {
+    "code": "blog2",
+    "title": "Exploring the Night Markets of Bangkok",
+    "shortDescription": "Vietnam is a beautiful country with rich culture and history. It's a popular travel destination for many, but safety is always a concern for travelers. In this guide, we'll cover everything you need to know about travel safety in Vietnam.",
+    "slug": "exploring-the-night-markets-of-bangkok",
+    "blogType": "Travel experience",
+    "postedAt": "March 15, 2024",
+    "author": "Jane Smith",
+    "thumbnail": "images/blog/card-item-2.jpg",
+    "thumbnailAlt": "Vietnam travel safety guide thumbnail",
+    "detailBanner": "/images/blog/banner-blog-detail.jpg",
+    "detailBannerAlt": "Vietnam travel safety guide 2",
+    "highlighted": true,
+    "content": [
+      {
+        "type": "text",
+        "content": "Exploring the vibrant night markets of Bangkok is a must-do for any traveler. The markets are bustling with energy and offer a wide variety of street food, clothing, and souvenirs."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-1.jpg"
+      },
+      {
+        "type": "text",
+        "content": "One of the most popular night markets is the Chatuchak Weekend Market, where you can find everything from traditional Thai handicrafts to trendy fashion."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Don't forget to try the delicious street food, such as pad thai, mango sticky rice, and fresh coconut ice cream."
+      }
+    ]
+  },
+  {
+    "code": "blog3",
+    "title": "A Culinary Journey through Italy",
+    "shortDescription": "Vietnam is a beautiful country with rich culture and history. It's a popular travel destination for many, but safety is always a concern for travelers. In this guide, we'll cover everything you need to know about travel safety in Vietnam.",
+    "slug": "a-culinary-journey-through-italy",
+    "blogType": "Food & Drink",
+    "postedAt": "April 10, 2024",
+    "author": "Emily Johnson",
+    "thumbnail": "images/blog/card-item-3.jpg",
+    "thumbnailAlt": "Vietnam travel safety guide thumbnail",
+    "detailBanner": "/images/blog/banner-blog-detail.jpg",
+    "detailBannerAlt": "Vietnam travel safety guide 3",
+    "highlighted": true,
+    "content": [
+      {
+        "type": "text",
+        "content": "Italy is renowned for its rich culinary traditions, and a visit to this beautiful country is not complete without indulging in its delicious food and drink."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "From the fresh seafood dishes of the Amalfi Coast to the hearty pasta and pizza of Naples, every region has its own unique flavors to offer."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Be sure to visit local markets and try regional specialties such as truffle dishes in Umbria, balsamic vinegar in Modena, and the world-famous wines of Tuscany."
+      }
+    ]
+  },
+  {
+    "code": "blog3",
+    "title": "A Culinary Journey through Italy",
+    "shortDescription": "Vietnam is a beautiful country with rich culture and history. It's a popular travel destination for many, but safety is always a concern for travelers. In this guide, we'll cover everything you need to know about travel safety in Vietnam.",
+    "slug": "a-culinary-journey-through-italy",
+    "blogType": "Food & Drink",
+    "postedAt": "April 10, 2024",
+    "author": "Emily Johnson",
+    "thumbnail": "images/blog/card-item-3.jpg",
+    "thumbnailAlt": "Vietnam travel safety guide thumbnail",
+    "detailBanner": "/images/blog/banner-blog-detail.jpg",
+    "detailBannerAlt": "Vietnam travel safety guide 3",
+    "highlighted": true,
+    "content": [
+      {
+        "type": "text",
+        "content": "Italy is renowned for its rich culinary traditions, and a visit to this beautiful country is not complete without indulging in its delicious food and drink."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "From the fresh seafood dishes of the Amalfi Coast to the hearty pasta and pizza of Naples, every region has its own unique flavors to offer."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Be sure to visit local markets and try regional specialties such as truffle dishes in Umbria, balsamic vinegar in Modena, and the world-famous wines of Tuscany."
+      }
+    ]
+  },
+  {
+    "code": "blog4",
+    "title": "The Best Beaches in the Caribbean",
+    "shortDescription": "Vietnam is a beautiful country with rich culture and history. It's a popular travel destination for many, but safety is always a concern for travelers. In this guide, we'll cover everything you need to know about travel safety in Vietnam.",
+    "slug": "the-best-beaches-in-the-caribbean",
+    "blogType": "Travel guide",
+    "postedAt": "May 5, 2024",
+    "author": "Michael Brown",
+    "thumbnail": "images/blog/card-item-4.jpg",
+    "thumbnailAlt": "Vietnam travel safety guide thumbnail",
+    "detailBanner": "/images/blog/banner-blog-detail.jpg",
+    "detailBannerAlt": "Vietnam travel safety guide 4",
+    "highlighted": false,
+    "content": [
+      {
+        "type": "text",
+        "content": "The Caribbean is home to some of the most beautiful beaches in the world, with crystal clear waters and white sandy shores."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-1.jpg"
+      },
+      {
+        "type": "text",
+        "content": "From the secluded beaches of the Bahamas to the vibrant shores of Jamaica, there is a perfect beach for every type of traveler."
+      },
+      {
+        "type": "image",
+        "content": "/images/blog/blog-detail-img-3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "For those looking for adventure, many Caribbean beaches offer activities such as snorkeling, scuba diving, and sailing."
+      }
+    ]
+  }
+]

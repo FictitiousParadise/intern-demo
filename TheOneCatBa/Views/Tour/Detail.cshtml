@@ -1,0 +1,328 @@
+﻿@{
+    Tours tour = ViewData["tour"] as Tours;
+    Page page = ViewData["page"] as Page;
+    var gallery = tour?.Gallery;
+    var count = 0;
+}
+
+@functions {
+    public List<List<ImageApp>> BatchImages(List<ImageApp> images, int batchSize)
+    {
+        var batches = new List<List<ImageApp>>();
+        for (int i = 0; i < images.Count; i += batchSize)
+        {
+            batches.Add(images.GetRange(i, Math.Min(batchSize, images.Count - i)));
+        }
+        return batches;
+    }
+}
+
+<link href="~/css/tour/tourDetail.css" rel="stylesheet" />
+
+<div class="bg-body bg-tour-detail body-align">
+
+    @* BANNER *@
+    <section class="section-banner">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    @* tour BODY *@
+    <div class="padding-sides tour-detail__body-container">
+        <div class="row g-0">
+
+            @* tour DETAIL *@
+            <div class="col-lg-8 p-3">
+
+                @* INTRO *@
+                <section class="intro">
+                    <div class="row g-0">
+                        <div class="col aligner--left">
+                            <div class="head__text--size fw-bold">@tour.Name</div>
+                        </div>
+                        <div class="col aligner--right">
+                            <div class="d-flex flex-row-reverse booked__text--size">
+                                <span class="text"> @tour.Booked booked </span>
+                                <span class="star-rating">
+                                    @for (int i = 0; i < Math.Floor(tour.Stars); i++)
+                                    {
+                                        <span class="fa fa-star"></span>
+                                    }
+                                    @if (tour.Stars % 1 != 0)
+                                    {
+                                        <span class="fa fa-star-half-o"></span>
+                                    }
+                                    @for (int i = (int)Math.Ceiling(tour.Stars); i < 5; i++)
+                                    {
+                                        <span class="fa fa-star fa-star-o"></span>
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col aligner--left">
+                            <div class="price-tag">
+                                @{
+                                    @((tour.FinalPrice / 100).ToString("0.00"))
+                                }$
+                            </div>
+                        </div>
+                        <div class="col aligner--right">
+                            <a class="icon-container" href="#"><span><img src="/images/icon/upload.png" class="icon--size" alt="share icon" /> Share</span></a>
+                        </div>
+                    </div>
+                </section>
+
+                @* OVERVIEW *@
+                <section class="overview">
+                    <div class="font-36px kalam--text text-dark-green aligner--left header--spacing">Overview</div>
+                    <div class="aligner--left">@tour.Overview</div>
+                    <div class="row g-0 aligner--left mt-3">
+                        <div class="col"><span><img src="/images/icon/arrow-square.png" class="icon--size" alt="arrow square icon" />  @tour.Destination</span></div>
+                        <div class="col"><span><img src="/images/icon/bus.png" class="icon--size" alt="arrow square icon" />  @tour.Transport</span></div>
+                        <div class="w-100 d-block d-md-none"></div>
+                        <div class="col"><span><img src="/images/icon/alarm.png" class="icon--size" alt="arrow square icon" />  @tour.Duration</span></div>
+                        <div class="col"><span><img src="/images/icon/person-wave.png" class="icon--size" alt="arrow square icon" />  @tour.Departure</span></div>
+                    </div>
+                </section>
+
+                @* ITINERARY *@
+                <section class="itinerary mt-3 aligner--left">
+                    <div class="itinerary-container">
+                        <div class="font-36px kalam--text text-dark-green aligner--left header--spacing">Itinerary</div>
+                        @foreach (var item in tour.Itinerary)
+                        {
+                            <div class="itinerary__content" id="@item.Code">
+                                <p class="d-inline-flex gap-1">
+                                    <span class="itinerary-number">@item.Day</span>
+                                    <button class="custom-collapse-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#@item.TourCode-@item.Code" aria-expanded="true" aria-controls="collapse">
+                                        @item.DayTitle
+                                    </button>
+                                    <div class="collapse-sub-heading">@item.DaySubTitle</div>
+                                </p>
+
+                                <div class="collapse @(count == 0 ? "show" : "")" id="@item.TourCode-@item.Code" data-bs-parent=".itinerary-container">
+                                    @foreach (var ItineraryDetail in item.ItineraryDetails)
+                                    {
+                                        var detailCount = 0;
+                                        var imageBatches = BatchImages(ItineraryDetail.Images, 3);
+                                        <div class="itinerary-content__text">
+                                            <div class="mt-3 itinerary-content__title">@ItineraryDetail.Title</div>
+                                            <div class="itinerary-content__duration">@ItineraryDetail.Duration</div>
+                                            @if (imageBatches.Count > 0)
+                                            {
+                                                <div id="@ItineraryDetail.ItineraryCode-@ItineraryDetail.Code" class="carousel slide" data-bs-ride="carousel">
+                                                    <div class="carousel-inner">
+                                                        @foreach (var batch in imageBatches)
+                                                        {
+                                                            <div class="carousel-item @(detailCount == 0 ? "active" : "")">
+                                                                <div class="d-flex">
+                                                                    @foreach (var img in batch)
+                                                                    {
+                                                                        <div class="carousel-image-wrapper">
+                                                                            <img src="@img.Url" class="d-block w-100 carousel-img" alt="@img.Alt">
+                                                                        </div>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                            detailCount++;
+                                                        }
+                                                    </div>
+                                                    @if (imageBatches.Count > 1)
+                                                    {
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#@ItineraryDetail.ItineraryCode-@ItineraryDetail.Code" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon custom-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#@ItineraryDetail.ItineraryCode-@ItineraryDetail.Code" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon custom-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    }
+                                                </div>
+                                            }
+                                            <div>
+                                                @ItineraryDetail.Content
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            count++;
+                        }
+                    </div>
+                </section>
+
+
+                @* ALL YOU NEED TO KNOW *@
+                <section class="information aligner--left">
+                    <div class="font-36px kalam--text text-dark-green header--spacing">All You Need To Know</div>
+                    <div class="inclusion mt-2">
+                        <div class="font-24px">Inclusions</div>
+                        <ul>
+                            @foreach (var item in tour.Inclusions)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="exclusion mt-2">
+                        <div class="font-24px">Exclusions</div>
+                        <ul>
+                            @foreach (var item in tour.Exclusions)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+                </section>
+
+                @* GALLERY *@
+                <section class="gallery">
+                    <div class="gallery-container aligner--left">
+                        <div class="golden-glasses"></div>
+                        <div class="gallery__header kalam--text text-dark-green header--spacing">Gallery</div>
+                        <div class="sun-glasses"></div>
+                        <div class="gallery-grid-container">
+                            @if (gallery != null && gallery.Any())
+                            {
+                                for (int i = 0; i < Math.Min(gallery.Count, 5); i++)
+                                {
+                                    <img src="@gallery[i].Url" class="gallery__grid--@(i + 1)" alt="@gallery[i].Alt" />
+                                }
+                            }
+                            else
+                            {
+                                <p>No images available</p>
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                @* REVIEW *@
+                <section class="review">
+                    <div class="review-leaves"></div>
+                    <div class="row g-0 header--spacing">
+                        <div class="col aligner--left">
+                            <div class="review__header--size fw-bold">Review</div>
+                        </div>
+                        <div class="col aligner--right">
+                            <div class="d-flex flex-row-reverse rating__text--size">
+                                <span class="mr-2">
+                                    <span class="star-rating">
+                                        @for (int i = 0; i < Math.Floor(tour.Stars); i++)
+                                        {
+                                            <span class="fa fa-star"></span>
+                                        }
+                                        @if (tour.Stars % 1 != 0)
+                                        {
+                                            <span class="fa fa-star-half-o"></span>
+                                        }
+                                        @for (int i = (int)Math.Ceiling(tour.Stars); i < 5; i++)
+                                        {
+                                            <span class="fa fa-star fa-star-o"></span>
+                                        }
+                                    </span>
+                                </span>
+                                <span class="text">@tour.Stars </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col aligner--left">
+                            <div>Title abc abc abc abc abc abc abc</div>
+                        </div>
+                        <div class="col aligner--right">
+                            <div class="font-14px">469 reviews</div>
+                        </div>
+                    </div>
+                    <div class="room-review">
+                        <div class="review__body">
+                            <!-- Slider main container -->
+                            <div class="swiper tour-detail-silde">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="card-custom">
+                                            <div class="media mb-3 d-flex flex-row">
+                                                <div class="review-avatar-container p-2">
+                                                    <div class="avatar-placeholder mr-3"></div>
+                                                </div>
+                                                <div class="media-body p-2">
+                                                    <h5 class="mt-0">Guest Name</h5>
+                                                    <div class="star-rating ml-2">
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star fa-star-o"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="font-14px aligner--left">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card-custom">
+                                            <div class="media mb-3 d-flex flex-row">
+                                                <div class="review-avatar-container p-2">
+                                                    <div class="avatar-placeholder mr-3"></div>
+                                                </div>
+                                                <div class="media-body p-2">
+                                                    <h5 class="mt-0">Guest Name</h5>
+                                                    <div class="star-rating ml-2">
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star fa-star-o"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="font-14px aligner--left">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card-custom">
+                                            <div class="media mb-3 d-flex flex-row">
+                                                <div class="review-avatar-container p-2">
+                                                    <div class="avatar-placeholder mr-3"></div>
+                                                </div>
+                                                <div class="media-body p-2">
+                                                    <h5 class="mt-0">Guest Name</h5>
+                                                    <div class="star-rating ml-2">
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star fa-star-o"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="font-14px aligner--left">Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac. Elementum congue sit volutpat eleifend lectus sed eros sit.Elementum congue sit volutpat eleifend lectus sed eros sit Lorem ipsum dolor sit amet consectetur. Commodo volutpat tellus et ac</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            @* ROOMS FORM BOOK NOW *@
+            <div class="col-lg-4 p-3">
+                @await Html.PartialAsync("~/Views/Partial/_BookNowSideForm.cshtml")
+            </div>
+        </div>
+        @* FAQ *@
+        <section class="faq">
+            @await Html.PartialAsync("~/Views/Partial/_Faq.cshtml")
+        </section>
+
+    </div>
+</div>

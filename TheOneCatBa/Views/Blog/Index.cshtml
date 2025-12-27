@@ -1,0 +1,146 @@
+﻿@using TheOneCatBa.Utils
+@using System.Linq
+
+@{
+    Page page = ViewData["page"] as Page;
+    var blogs = ViewData["blogs"] as List<TheOneCatBa.Models.Blog>;
+    var highlightedBlogs = blogs.Where(b => b.Highlighted).ToList();
+}
+
+<link href="~/css/blog/blog.css" rel="stylesheet" />
+
+<div class="bg-body bg-blog body-align">
+    <section class="section-banner section-bg">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>
+            <img src="/images/icon/search-icon.png" alt="Search Icon">
+        </button>
+    </div>
+
+    <div class="blog-body__container">
+        <div class="row g-0">
+            @* Main Body *@
+            <div class="col-md-7">
+
+                <section class="high-light">
+                    <div class="high-light__header content-padding">
+                        <div class="font-24px fw-bold">Highlight</div>
+                        <div>Title</div>
+                    </div>
+                    <div class="high-light__body">
+                        <!-- Slider main container -->
+                        <div class="swiper highlight-slider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                @foreach (var item in highlightedBlogs)
+                                {
+                                    <div class="swiper-slide">
+                                        <a asp-area="" asp-controller="Blog" asp-action="Detail" asp-route-slug="@item.Slug">
+                                            <div class="card text-bg-dark card-modifier">
+                                                <img src="@item.Thumbnail" class="card-img" alt="@item.ThumbnailAlt">
+                                                <div class="card-img-overlay">
+                                                    <h5 class="card-title font-24px">@item.Title</h5>
+                                                    <p class="card-text">@item.ShortDescription</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recently">
+                    <div class="recently-container--left">
+                        <div class="recently__header content-padding">
+                            <div class="recently-feather--left"></div>
+                            <div class="font-24px fw-bold">Recently</div>
+                            <div>Title</div>
+                            <div class="recently-feather--right "></div>
+                        </div>
+                        <div class="recently__body">
+
+                            @foreach (var item in ViewData["allBlog"] as List<Blog>)
+                            {
+                                <div class="card mb-3 recently-item__modifier">
+                                    <a asp-area="" asp-controller="Blog" asp-action="Detail" asp-route-slug="@item.Slug">
+                                        <div class="row g-0">
+                                            <div class="col-4 col-md-12 card-img-container">
+                                                <img src="@item.Thumbnail" class="img-fluid item-modifier" alt="@item.ThumbnailAlt">
+                                            </div>
+                                            <div class="col-8 col-md-12">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">@item.Title</h5>
+                                                    <p class="card-text">@item.ShortDescription</p>
+                                                    <div class="row g-0 item__bottom--blue">
+                                                        <div class="col">
+                                                            <span>
+                                                                <img src="/images/icon/blog-callendar-icon.png" class="item-icon--size" alt="callendar icon"/> @item.PostedAt
+                                                            </span>
+                                                        </div>
+                                                        <div class="col right-aligner">
+                                                            <span>
+                                                                <img src="/images/icon/blog-user-icon.png" class="item-icon--size" alt="post author"/> @item.Author
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+
+                            <div class="container mt-5 mb-3">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        @if ((int)ViewData["currentPage"] > 1)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = (int)ViewData["currentPage"] - 1 })" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        }
+
+                                        @for (int i = 1; i <= (int)ViewData["totalPages"]; i++)
+                                        {
+                                            <li class="page-item @(i == (int)ViewData["currentPage"] ? "active" : "")">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                            </li>
+                                        }
+
+                                        @if ((int)ViewData["currentPage"] < (int)ViewData["totalPages"])
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = (int)ViewData["currentPage"] + 1 })" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            @* Side bar*@
+            <div class="col-md-5 side-bar__container">
+                @await Html.PartialAsync("~/Views/Partial/_AnyHelpForm.cshtml")
+            </div>
+
+        </div>
+    </div>
+</div>

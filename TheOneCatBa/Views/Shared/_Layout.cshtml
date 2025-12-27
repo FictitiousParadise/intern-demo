@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] TheOneCatBa</title>
+    @* Bootstrap *@
+    <link href="~/lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    @* Date picker *@
+    <link href="~/lib/datepicker/datepicker.css" rel="stylesheet" />
+    @* International telephone input *@
+    <link href="~/lib/intltelinput/intltelinput.css" rel="stylesheet" />
+    @* Swiper *@
+    <link href="~/lib/swiper/swiper-bundle.css" rel="stylesheet" />
+    @* Custom font *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    @* Custom CSS *@
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    @await Html.PartialAsync("~/views/shared/_Header.cshtml")
+
+    <main>
+        @RenderBody()
+    </main>
+
+    @await Html.PartialAsync("~/views/shared/_Footer.cshtml")
+
+
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/datepicker/air-datepicker.js"></script>
+    <script src="~/lib/intltelinput/intltelinput.js"></script>
+    <script src="~/lib/swiper/swiper-bundle.js"></script>
+    <script src="~/js/main.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,530 @@
+﻿.middle-centered {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.body-align {
+    max-width: 1920px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-body {
+    background-image: url(/images/home/home-bg.png);
+    background-size: 500px 500px;
+    padding-bottom: 60px;
+    background-repeat: repeat;
+    background-color: whitesmoke;
+}
+
+.bg-home section {
+    padding: 40px 0;
+}
+
+/* Buttons */
+.book-now-button {
+    background-color: rgb(217,217,217,0.5);
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px;
+    font-size: 16px;
+    box-shadow: 1px 1px #544738;
+}
+
+/* Banner */
+.banner-text {
+    position: absolute;
+    left: 25px;
+    top: 40%;
+    z-index: 3;
+    color: var(--main-text-dark);
+    width: 50%;
+    min-width: 430px;
+    text-align: left;
+}
+
+.banner-text__header {
+    font-size: 36px;
+    font-weight: 500;
+    width: 90%;
+}
+
+.banner-text__heading-sub {
+    font-size: 18px;
+    width: 50%;
+}
+
+.banner-content {
+    background-image: url(/images/home/wave-left.png);
+    top: -10px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: center;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 600px;
+    height: 100%;
+    z-index: 2;
+}
+
+@media(max-width: 992px) {
+    .banner-content {
+        background-image: url(/images/home/home-wave-mobile.png);
+        top: unset;
+        left: unset;
+        bottom: -340px;
+        right: -190px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-position-y: center;
+        background-size: 100% 100%;
+        position: absolute;
+        min-width: 660px;
+        width: 160%;
+        aspect-ratio: 727 / 492;
+    }
+
+    .banner-text {
+        color: white;
+        top: 22%;
+    }
+}
+
+/* Rooms */
+.rooms {
+    text-align: center;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.rooms__body {
+    width: 100%;
+    overflow: hidden;
+}
+
+    .rooms__body .swiper-slide {
+        padding: 20px 0;
+    }
+
+.card__image--size {
+    position: relative;
+    width: 700px !important;
+    aspect-ratio: 3 / 2;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card-modifier {
+    max-width: 20rem !important;
+    min-width: 18rem !important;
+    border-radius: 20px !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    margin: 15px;
+    margin-right: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.43);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.card-modifier:hover .card-img-overlay {
+    top: 30%;
+}
+
+.card__price--blue {
+    color: #29D2E7;
+    font-size: 24px;
+}
+
+.card-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-14px);
+    transition: -webkit-line-clamp 0.3s ease-in-out;
+}
+
+.card-modifier:hover .card-content {
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.book-now-button {
+    position: absolute;
+    bottom: 10px;
+    left: 30%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.home-beach-items {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    background-image: url(/images/home/home-beach-item-1.png);
+    background-size: 100% 100%;
+    width: 30%;
+    aspect-ratio: 267 / 341;
+    max-width: 145px;
+    max-height: 185px;
+}
+
+/* Tours */
+.tours {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.tours__body {
+    z-index: 3;
+}
+
+.tour-card-modifier {
+    width: 23rem !important;
+    max-width: 23rem !important;
+    min-width: 19rem !important;
+    border-radius: 20px !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    margin: 15px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+    .tour-card-modifier:hover .card-img-overlay {
+        top: 30%;
+    }
+
+    .tour-card-modifier:hover .card-content {
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+    }
+
+.tour-splash {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-image: url(/images/home/home-splash-1.png);
+    background-size: 100% 100%;
+    width: 70%;
+    aspect-ratio: 1087 / 368;
+}
+
+@media (max-width: 992px) {
+    .tour-card-modifier {
+        width: 19rem !important;
+        max-width: 19rem !important;
+        min-width: 19rem !important;
+    }
+}
+
+/* Security */
+.home-security {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.safety--padding {
+    padding: 7px;
+}
+
+.security__img-container {
+    padding: 10px;
+}
+
+.overlay-content {
+    position: relative;
+    word-break: break-all;
+    padding: 15px;
+    z-index: 3;
+}
+
+.safety-image__container {
+    padding: 10px;
+}
+
+.safety-text__container {
+    position: relative;
+    transform: translateY(35%);
+    font-size: clamp(0rem, 1.8vw, 2.5rem);
+}
+
+.safety-image--style {
+    max-width: 75%;
+    max-height: 75%;
+    width: auto;
+    height: auto;
+    transform: translateY(50%);
+}
+
+.widget__special-rule {
+    transform: translateY(25%);
+}
+
+.safety__widget {
+    background-color: #EDFDFE;
+    border: 1px solid #0E91AC;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+}
+
+.overlay-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 18px;
+}
+
+/* Small screen widgets */
+.safety-small-screen {
+    display: none;
+}
+
+.mobile-widget {
+    width: 70%;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #29D2E7;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 14px 1px rgba(237,247,244,0.5);
+    -moz-box-shadow: 0px 0px 14px 1px rgba(237,247,244,0.5);
+    box-shadow: 0px 0px 14px 1px rgba(237,247,244,0.5);
+    min-height: 114px;
+}
+
+.mobile-widget-padding {
+    padding: 10px;
+}
+
+.mobile-image-container {
+    padding: 5%;
+}
+
+.mobile-widget-image {
+    width: 45%;
+}
+
+.mobile-widget__text {
+    word-break: break-word;
+}
+
+.special-pad {
+    width: 67%;
+}
+
+@media (max-width: 768px) {
+    .overlay-content {
+        position: absolute !important;
+        z-index: 3;
+        max-width: 100%;
+        padding-top: 30px;
+        color: white;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+        .wrapper:after {
+            content: "";
+            background: rgb(255,153,0);
+            background: linear-gradient(225deg, rgba(255,153,0,0.32) 0%, rgba(25,79,96,0.8) 100%);
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+        }
+
+    .overlay-content .middle-centered {
+        transform: unset;
+    }
+
+    .home-security {
+        padding: 0;
+    }
+
+    .security__img-container {
+        padding: 0;
+    }
+
+    .safety-big-screen {
+        display: none;
+    }
+
+    .safety-small-screen {
+        display: flex;
+    }
+
+    .overlay-image {
+        min-height: 555px;
+    }
+}
+
+/* Review */
+.review {
+    position: relative;
+}
+
+.review__header {
+    text-align: center;
+}
+
+.review__body {
+    padding: 20px;
+}
+
+.review-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: -webkit-line-clamp 0.3s ease-in-out;
+}
+
+.review-modified-card {
+    max-width: 25rem;
+    width: 100%;
+    padding: 15px;
+}
+
+.card-custom {
+    background-color: #EDFDFE;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 450px;
+    margin: auto;
+    -webkit-box-shadow: 1px 0px 6.5px 0px rgba(25, 117, 137, 0.49);
+    -moz-box-shadow: 1px 0px 6.5px 0px rgba(25, 117, 137, 0.49);
+    box-shadow: 1px 0px 6.5px 0px rgba(25, 117, 137, 0.49);
+}
+
+.review__body .swiper-android .swiper-slide, .review__body .swiper-ios .swiper-slide, .review__body .swiper-wrapper {
+    padding: 6px;
+}
+
+.avatar-placeholder {
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle; /* Aligns the avatar vertically */
+}
+
+.star-rating .fa-star {
+    color: gold;
+}
+
+.star-rating .fa-star-o {
+    color: grey;
+}
+
+.review-leaves {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    background-image: url(/images/home/home-leaves.png);
+    background-size: 100% 100%;
+    width: 60%;
+    aspect-ratio: 1101 / 549;
+}
+
+/* Gallery */
+.gallery {
+    position: relative;
+}
+
+.gallery-header {
+    text-align: center;
+}
+
+.gallery-container {
+    overflow: hidden;
+    padding: 6px;
+}
+
+.gallery-image-bigger {
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+    .gallery-image-bigger img {
+        position: relative;
+        min-width: 700px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+.gallery-image-smaller {
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+    .gallery-image-smaller img {
+        position: relative;
+        min-width: 350px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+.gallery-slipper {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-image: url(/images/home/home-slipper.png);
+    background-size: 100% 100%;
+    width: 10%;
+    aspect-ratio: 156 / 182;
+    max-width: 80px;
+    max-height: 90px;
+}
+
+.gallery-glasses {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-image: url(/images/home/home-sun-glasses.png);
+    background-size: 100% 100%;
+    width: 20%;
+    aspect-ratio: 230 / 143;
+    max-width: 145px;
+    max-height: 90px;
+}

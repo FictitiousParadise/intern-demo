@@ -1,0 +1,229 @@
+﻿@using TheOneCatBa.Utils
+@using System.Linq
+
+@{
+    List<Tours> listTours = ViewData["tours"] as List<Tours>;
+
+    Page page = ViewData["page"] as Page;
+}
+
+<link href="~/css/tour/tour.css" rel="stylesheet" />
+
+<div class="bg-body bg-tour body-align">
+
+    @* BANNER *@
+    <section class="section-banner">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    @* BOOK NOW FORM *@
+    <section class="header__book-now-form">
+        <div class="container">
+            <div class="booking-form">
+                <div class="row g-0">
+                    <div class="col-md-3 p-2 right-separator">
+                        <div class="booking-form__label">Guest Number</div>
+                        <div class="form-group">
+                            <div class="row g-0">
+                                <div class="col-1 mobile-only">
+                                    <img src="/images/icon/home-people-icon.png" />
+                                </div>
+                                <div class="col-11 col-md-12">
+                                    <select class="form-select" id="exampleSelect1">
+                                        <option value="1">1 Guest</option>
+                                        <option selected value="2">2 Guest</option>
+                                        <option value="3">3 Guest</option>
+                                        <option value="4">4 Guest</option>
+                                        <option value="5">5 Guest</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2 right-separator">
+                        <div class="booking-form__label">DATE</div>
+                        <div class="row g-0">
+                            <div class="col-1 mobile-only">
+                                <img src="/images/icon/home-callendar-icon.png" />
+                            </div>
+                            <div class="col-11 col-md-12 aligner--left">
+                                <input id="dateRange" name="dateBooking" placeholder="Start date - End date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <div class="booking-form__label">DESTINATION</div>
+                        <div class="form-group">
+                            <div class="row g-0">
+                                <div class="col-1 mobile-only">
+                                    <img src="/images/icon/home-people-icon.png" />
+                                </div>
+                                <div class="col-11 col-md-12">
+                                    <select class="form-select" id="exampleSelect1">
+                                        <option value="1">CATBA 2D1N</option>
+                                        <option selected value="2">HALONG 2D1N</option>
+                                        <option value="3">NHATRANG 2D1N</option>
+                                        <option value="4">CUA LO 2D1N</option>
+                                        <option value="5">PHU QUOC</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <a type="button" class="btn form-btn-book-now middle-centered">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* TOUR SLIDER *@
+    <section class="tour">
+        <div class="home-tours">
+            <div class="tour__header heading-padding animation-trigger-fadeIn">
+                <div class="beach-items"></div>
+                <div class="font-36px caveat--text">Recomended Tours</div>
+                <div>Title acb abc abc abc abc abc</div>
+            </div>
+            <div class="tour__body padding-sides animation-trigger-slideInBottom">
+                <div class="swiper tour-page-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Your card slides go here -->
+                        @foreach (var item in listTours)
+                        {
+                            <div class="swiper-slide">
+                                <div class="card-group">
+                                    <div class="card tour-card-modifier">
+                                        <img src="@item.Thumbnail" alt="@item.ThumbnailAlt" class="card-img card__image--size centered-img">
+                                        <div class="card-img-overlay">
+                                            <div class="aligner--left">
+                                                <h5 class="card-title">@item.Name</h5>
+                                                <div class="d-flex align-items-center font-14px">
+                                                    <span class="star-rating mr-2">
+                                                        @for (int i = 0; i < Math.Floor(item.Stars); i++)
+                                                        {
+                                                            <span class="fa fa-star"></span>
+                                                        }
+                                                        @if (item.Stars % 1 != 0)
+                                                        {
+                                                            <span class="fa fa-star-half-o"></span>
+                                                        }
+                                                        @for (int i = (int)Math.Ceiling(item.Stars); i < 5; i++)
+                                                        {
+                                                            <span class="fa fa-star fa-star-o"></span>
+                                                        }
+                                                    </span>
+                                                    <span class="text">@item.Booked booked</span>
+                                                </div>
+                                                <p class="card-text card__price--blue">
+                                                    @{
+                                                        @((item.FinalPrice / 100).ToString("0.00"))
+                                                    }$
+                                                </p>
+                                                <p class="card-text card-content">@item.ShortDescription</p>
+                                            </div>
+                                            <a asp-area="" asp-controller="Tour" asp-action="Detail" asp-route-slug="@item.Slug" class="btn book-now-button">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* ALL TOUR *@
+    <section class="all-tour">
+        <div class="all-tour-container">
+            <div class="orange-splash"></div>
+            <div class="all-tour__header heading-padding animation-trigger-fadeIn">
+                <div class="font-36px caveat--text">All tour</div>
+                <div>Title acb abc abc abc abc abc</div>
+            </div>
+            <div class="all-tour__body padding-sides animation-trigger-slideInBottom">
+
+                <div class="tour-grid__container">
+                    @foreach (var item in ViewData["allTour"] as List<Tours>)
+                    {
+                        <div class="card tour-card-modifier">
+                            <img src="@item.Thumbnail" alt="@item.ThumbnailAlt" class="card-img card__image--size centered-img">
+                            <div class="card-img-overlay">
+                                <div class="aligner--left">
+                                    <h5 class="card-title">@item.Name</h5>
+                                    <div class="d-flex align-items-center font-14px">
+                                        <span class="mr-2">
+                                            <span class="star-rating">
+                                                @for (int i = 0; i < Math.Floor(item.Stars); i++)
+                                                {
+                                                    <span class="fa fa-star"></span>
+                                                }
+                                                @if (item.Stars % 1 != 0)
+                                                {
+                                                    <span class="fa fa-star-half-o"></span>
+                                                }
+                                                @for (int i = (int)Math.Ceiling(item.Stars); i < 5; i++)
+                                                {
+                                                    <span class="fa fa-star fa-star-o"></span>
+                                                }
+                                            </span>
+                                        </span>
+                                        <span class="text">@item.Booked booked</span>
+                                    </div>
+                                    <p class="card-text card__price--blue">
+                                        @{
+                                            @((item.FinalPrice / 100).ToString("0.00"))
+                                        }$
+                                    </p>
+                                    <p class="card-text card-content">@item.ShortDescription</p>
+                                </div>
+                                <a asp-area="" asp-controller="Tour" asp-action="Detail" asp-route-slug="@item.Slug" class="btn book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="container mt-5 mb-3">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            @if ((int)ViewData["currentPage"] > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = (int)ViewData["currentPage"] - 1 })" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
+
+                            @for (int i = 1; i <= (int)ViewData["totalPages"]; i++)
+                            {
+                                <li class="page-item @(i == (int)ViewData["currentPage"] ? "active" : "")">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                </li>
+                            }
+
+                            @if ((int)ViewData["currentPage"] < (int)ViewData["totalPages"])
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = (int)ViewData["currentPage"] + 1 })" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>

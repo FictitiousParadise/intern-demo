@@ -1,0 +1,214 @@
+﻿@using TheOneCatBa.Utils
+@using System.Linq
+
+@{
+    List<CloudbedsRoomType> rooms = ViewData["rooms"] as List<CloudbedsRoomType>;
+    List<CloudbedsRoomType> privateRooms = ViewData["privateRooms"] as List<CloudbedsRoomType>;
+    List<CloudbedsRoomType> sharedRooms = ViewData["sharedRooms"] as List<CloudbedsRoomType>;
+
+    Page page = ViewData["page"] as Page;
+}
+
+<link href="~/css/rooms/rooms.css" rel="stylesheet" />
+
+<div class="bg-body bg-rooms body-align">
+
+    @* BANNER *@
+    <section class="section-banner">
+        @await Html.PartialAsync("~/Views/Partial/_Banner.cshtml", page.Banner)
+    </section>
+
+    @* BOOK NOW FORM *@
+    @await Html.PartialAsync("~/Views/Partial/_BookNowForm.cshtml")
+
+    @* ROOMS SLIDER *@
+    <section class="rooms">
+        <div class="home-tours">
+            <div class="rooms__header heading-padding animation-trigger-fadeIn">
+                <div class="beach-items"></div>
+                <div class="font-36px caveat--text">Recomended Room</div>
+                <div>Title acb abc abc abc abc abc</div>
+            </div>
+            <div class="rooms__body padding-sides animation-trigger-slideInBottom">
+                <div class="swiper rooms-page-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Your card slides go here -->
+                        @foreach (var item in rooms)
+                        {
+                            <div class="swiper-slide">
+                                <div class="card-group">
+                                    <div class="card rooms-card-modifier">
+                                        @if (item?.roomTypePhotos != null && item.roomTypePhotos.Count > 0)
+                                        {
+                                            string img = item.roomTypePhotos.First();
+
+                                            <img src="@(img)" alt="@(img.Split("/")[img.Split("/").Length-1])" class="card-img card__image--size centered-img">
+                                        }
+                                        else
+                                        {
+                                            <img src="/images/home/rooms-grid-1.png" alt="default image" class="card-img card__image--size centered-img">
+                                        }
+                                        <div class="card-img-overlay">
+                                            <div class="aligner--left">
+                                                <h5 class="card-title">@item.roomTypeName</h5>
+                                                <div class="d-flex align-items-center font-14px">
+                                                    <span class="mr-2">
+                                                        <span class="star-rating mr-2">
+                                                            @* @for (int i = 0; i < Math.Floor(item.Stars); i++)
+                                                            {
+                                                                <span class="fa fa-star"></span>
+                                                            }
+                                                            @if (item.Stars % 1 != 0)
+                                                            {
+                                                                <span class="fa fa-star-half-o"></span>
+                                                            }
+                                                            @for (int i = (int)Math.Ceiling(item.Stars); i < 5; i++)
+                                                            {
+                                                                <span class="fa fa-star fa-star-o"></span>
+                                                            } *@
+
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="text">@item.view booked</span>
+                                                </div>
+                                                <p class="card-text card__price--blue">
+                                                    @{
+                                                        @((item.price / 100).ToString("0.00"))
+                                                    }$
+                                                </p>
+                                                <p class="card-text card-content">@item.roomTypeDescription</p>
+                                            </div>
+                                            <a asp-area="" asp-controller="Rooms" asp-action="Detail" asp-route-slug="@item.slug" class="btn book-now-button">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* ALL ROOMS *@
+    <section class="all-rooms">
+        <div class="all-rooms-container">
+            <div class="orange-splash"></div>
+            <div class="all-rooms__header heading-padding animation-trigger-fadeIn">
+                <div class="font-36px caveat--text">All Room</div>
+                <div>Title acb abc abc abc abc abc</div>
+            </div>
+            <div class="all-rooms__body padding-sides animation-trigger-slideInBottom">
+                <ul class="nav row g-0 nav-fill mb-3" id="pills-tab" role="tablist">
+                    <li class="col" role="presentation">
+                        <button class="nav-link active" id="dorm-room-pill" data-bs-toggle="pill" data-bs-target="#dorm-room-tab" type="button" role="tab" aria-controls="dorm-room-tab" aria-selected="true">Dorm Room</button>
+                    </li>
+                    <div class="w-100 d-block d-md-none"></div>
+                    <li class="col" role="presentation">
+                        <button class="nav-link" id="double-room-pill" data-bs-toggle="pill" data-bs-target="#double-room-tab" type="button" role="tab" aria-controls="double-room-tab" aria-selected="false">Double Room</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="dorm-room-tab" role="tabpanel" aria-labelledby="dorm-room-tab" tabindex="1">
+
+                        <div class="rooms-grid__container">
+                            @foreach (var item in privateRooms)
+                            {
+                                <div class="card rooms-card-modifier">
+                                    @if (item?.roomTypePhotos != null && item.roomTypePhotos.Count > 0)
+                                    {
+                                        string img = item.roomTypePhotos.First();
+
+                                        <img src="@(img)" alt="@(img.Split("/")[img.Split("/").Length-1])" class="card-img card__image--size centered-img">
+                                    }
+                                    else
+                                    {
+                                        <img src="/images/home/rooms-grid-1.png" alt="default image" class="card-img card__image--size centered-img">
+                                    }
+                                    <div class="card-img-overlay">
+                                        <div class="aligner--left">
+                                            <h5 class="card-title">@item.roomTypeName</h5>
+                                            <div class="d-flex align-items-center font-14px">
+                                                <span class="star-rating mr-2">
+                                                    @* <span class="fa fa-star"></span>
+                                                <span class="fa fa-star-half-o"></span>
+                                                <span class="fa fa-star fa-star-o"></span> *@
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </span>
+                                                <span class="text">@item.view views</span>
+                                            </div>
+                                            <p class="card-text card__price--blue">
+                                                @{
+                                                    @((item.price / 100).ToString("0.00"))
+                                                }$
+                                            </p>
+                                            <p class="card-text card-content">@item.roomTypeDescription</p>
+                                        </div>
+                                        <a asp-area="" asp-controller="Rooms" asp-action="Detail" asp-route-slug="@item.slug" class="btn book-now-button">Book Now</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="double-room-tab" role="tabpanel" aria-labelledby="double-room-tab" tabindex="2">
+
+                        <div class="rooms-grid__container">
+                            @foreach (var item in sharedRooms)
+                            {
+                                <div class="card rooms-card-modifier">
+                                    @if (item?.roomTypePhotos != null && item.roomTypePhotos.Count > 0)
+                                    {
+                                        string img = item.roomTypePhotos.First();
+
+                                        <img src="@(img)" alt="@(img.Split("/")[img.Split("/").Length-1])" class="card-img card__image--size centered-img">
+                                    }
+                                    else
+                                    {
+                                        <img src="/images/home/rooms-grid-1.png" alt="default image" class="card-img card__image--size centered-img">
+                                    }                                    <div class="card-img-overlay">
+                                        <div class="aligner--left">
+                                            <h5 class="card-title">@item.roomTypeName</h5>
+                                            <div class="d-flex align-items-center font-14px">
+                                                <span class="star-rating">
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </span>
+                                                <span class="text">@item.view booked</span>
+                                            </div>
+                                            <p class="card-text card__price--blue">
+                                                @{
+                                                    @((item.price / 100).ToString("0.00"))
+                                                }$
+                                            </p>
+                                            <p class="card-text card-content">@item.roomTypeDescription</p>
+                                        </div>
+                                        <a asp-area="" asp-controller="Rooms" asp-action="Detail" asp-route-slug="@item.slug" class="btn book-now-button">Book Now</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

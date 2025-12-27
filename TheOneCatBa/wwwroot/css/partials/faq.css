@@ -1,0 +1,135 @@
+﻿/* FAQ */
+.faq-container {
+    padding: 10px 0;
+    margin: 20px 0;
+    background-color: #0E91AC;
+    border-radius: 20px;
+    background-image: url(/images/patials/any-help-form-bg.png);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-header {
+    color: white;
+    font-size: 36px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.faq-sub-header {
+    color: white;
+    font-size: 22px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+/* BODY */
+.faq-body {
+    padding: 40px 5%;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+/* Left content */
+.faq__content--left {
+    color: white;
+}
+
+.faq__container {
+    position: relative;
+    z-index: 5;
+    background-color: transparent;
+    height: fit-content;
+    padding: 20px 0 20px 0;
+    width: 100%;
+}
+
+.faq__input-container {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.faq__input {
+    padding: 10px 0 !important;
+    width: 70%;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.faq__input:focus {
+    background-color: transparent;
+}
+
+.faq__button {
+    border-radius: 10px;
+    width: fit-content;
+    height: 50px;
+    text-align: center;
+    background-color: #FF9900;
+    color: white;
+    font-size: clamp(10px, 2vw, 14px);
+    position: relative;
+}
+
+/* Right content */
+.faq-body .accordion {
+    z-index: 2;
+}
+
+.faq-body .accordion-item {
+    border: none;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0;
+    z-index: 2;
+    border-radius: 10px !important;
+}
+
+.faq-body .accordion-button {
+    color: #12748C !important;
+    background-color: rgba(214, 252, 239, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px !important;
+    z-index: 2;
+}
+
+/* Decorations */
+
+.faq-life-buoy {
+    position: absolute;
+    bottom: -70px;
+    left: -15px;
+    background-image: url(/images/blog/helper-form-donut.png);
+    background-size: 100% 100%;
+    width: 300px;
+    aspect-ratio: 223 / 231;
+    z-index: 1;
+}
+
+.faq-flower--pink {
+    position: absolute;
+    bottom: 22px;
+    right: 100px;
+    background-image: url(/images/blog/helper-form-flower-pink.png);
+    background-size: 100% 100%;
+    width: 60px;
+    aspect-ratio: 51 / 52;
+    z-index: 1;
+}
+
+.faq-flower--yellow {
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    background-image: url(/images/blog/helper-form-flower-yellow.png);
+    background-size: 100% 100%;
+    width: 60px;
+    aspect-ratio: 51 / 52;
+    z-index: 1;
+}

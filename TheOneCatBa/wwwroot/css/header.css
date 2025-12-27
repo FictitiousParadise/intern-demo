@@ -1,0 +1,128 @@
+﻿header {
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    min-width: 100%;
+    z-index: 2000;
+}
+
+.header-bottom {
+    max-width: 1920px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-top {
+    background-color: #002E3B;
+    padding-left: 15px;
+}
+
+.header-top ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header-top-right {
+    font-size: 14px;
+}
+
+.active {
+    color: #29D2E7 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation bar start */
+.header-bottom {
+    background-color: transparent;
+    transition: all 0.15s;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+    .header-bottom a {
+        text-decoration: none !important;
+        color: white;
+        border: none;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .header-bottom a:hover.nav-link-text {
+            text-decoration: none !important;
+            color: #29D2E7 !important;
+            border-bottom: 2px solid #29D2E7 !important;
+            transition: all 0.3s ease-in-out;
+        }
+
+    .header-bottom.scroll-active {
+        background-color: #ffff;
+        box-shadow: -3px 2px 2px #b6b6b673;
+        color: #10556E;
+    }
+
+        .header-bottom.scroll-active .navbar-light .navbar-nav .nav-link {
+            color: #10556E;
+        }
+
+.navbar-nav .nav-link {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+
+.btn-book-now {
+    background-color: #FFA800;
+    border: #FFA800;
+    border-radius: 10px;
+    font-weight: 400;
+    display: inline;
+    color: white !important;
+}
+
+.nav-link-text {
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+    .header-bottom {
+        background-color: #ffff;
+        box-shadow: -3px 2px 2px #b6b6b673;
+        color: #10556E;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #10556E;
+    }
+
+    .header-bottom a {
+        color: #10556E;
+    }
+
+    .navbar .nav-item {
+        margin-bottom: 6px;
+    }
+
+    .header-top {
+        display: none;
+    }
+
+    .nav-link {
+        margin-bottom: 4px !important;
+    }
+
+    .offcanvas-menu {
+        width: 100vw !important;
+    }
+
+}
